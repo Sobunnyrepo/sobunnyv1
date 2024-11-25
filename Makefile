@@ -16,12 +16,9 @@ export-db:
 
 import-db:
 	@read -p "Nombre de la base de datos: " DB_NAME; \
-	read -sp "Contraseña: " PASSWORD; \
-	echo ""; \
-	
-	@docker exec -i mysql-sobunny mysql -u user -p$$PASSWORD -e "DROP DATABASE IF EXISTS $$DB_NAME; CREATE DATABASE $$DB_NAME;" \
-	&& docker exec -i mysql-sobunny mysql -u user -p$$PASSWORD $$DB_NAME < sobunny.sql
-
+	echo "Conectando con las credenciales del archivo .env..."; \
+	docker exec -i mysql-sobunny mysql -u root -p$(DB_PASSWORD) -e "DROP DATABASE IF EXISTS $$DB_NAME; CREATE DATABASE $$DB_NAME;" && \
+	docker exec -i mysql-sobunny mysql -u root -p$(DB_PASSWORD) $$DB_NAME < sobunny.sql
 
 # export-db:
 # 	docker exec -i mysql-sobunny mysqldump -u root -p1234 db > sobunny.sql

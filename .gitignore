@@ -1,1 +1,54 @@
+/vendor/
+/vendor_old/
+/storage/
+/docker/*
+docker/gandb_testing.sql
+!/docker/nginx/default.conf
+!/docker/nginx/salvonets.conf
+/public/cartaPorte
+/public/invoices
+/public/images/prospectos
+/public/images/usuarios
+/public/images/avaluos
+/public/images/infonavit
+/public/images/profiles
+/public/images/propiedad
+/public/images/propiedades
+/public/images/documents
+/public/images/documents/clients
+/public/images/discrepancies
+/public/manifiestos
+/public/js/env.js
+vendorRespaldo
+build
+node_modules/
+npm-debug.log
+yarn-error.log
+/docker/mysql
+/docker/php
+/docker/nginx/logs
+/public/storage
+/docker
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
 .env
+.env.js
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+# Bootstrap specific
+/bootstrap/

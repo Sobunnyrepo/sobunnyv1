@@ -33,7 +33,7 @@ services:
       - MYSQL_ROOT_PASSWORD=pA7kE3xW!s9QmL2z
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pA7kE3xW!s9QmL2z
-      - MYSQL_DATABASE=sobunny_db
+      - MYSQL_DATABASE=sobynny_db
     volumes:
       - mysql_data:/var/lib/mysql
       - ./docker/mysql/sobunny.sql:/docker-entrypoint-initdb.d/sobunny.sql
