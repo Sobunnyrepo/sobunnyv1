@@ -41,4 +41,4 @@ full-clear:
 	@docker exec -it php-sobunny /bin/bash -c "php artisan config:cache && php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan route:cache && php artisan view:clear && php artisan view:cache"
 
 push-server-database:
-	@scp sobunny.sql root@$(SERVER_IP):/home/sobunny/
+	@scp sobunny.sql root@$(SERVER_IP):/home/sobunnyv1/
