@@ -53,4 +53,6 @@ Homestead.json
 # Bootstrap specific
 /bootstrap/
 docker/nginx/logs/
-docker/nginx/logs
+docker/nginx/logsassets/uploads/media-uploader/thumb/*
+assets/uploads/media-uploader/tiny/*
+assets/uploads/
