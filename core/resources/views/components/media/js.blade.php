@@ -154,7 +154,7 @@
                         loadAllImages(true);
                         // $('.media-uploader-image-list li:first-child').addClass('selected').trigger('click');
                             
-                        }, 2000);
+                        }, 500);
                     })();
 
                     return file.previewElement.classList.add("dz-success");
