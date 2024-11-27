@@ -36,7 +36,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="media_library" role="tabpanel" >
+                    <div class="tab-pane fade active show" id="media_library" role="tabpanel" >
                         <div class="all-uploaded-images">
 
                             <div class="main-content-area-wrap">
