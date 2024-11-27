@@ -82,7 +82,7 @@
     <!-- Eye Color Selector -->
     <div class="eye-colors w-100">
         <select id="search_by_eye_color" class="eyeColorSelect">
-            <option value="">Eye Color</option>
+            <option value="">Eye Colour</option>
             @foreach($eyeColors as $item)
             <option @if(!empty(request()->get("eye_color_id")) && request()->get("eye_color_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
@@ -92,7 +92,7 @@
     <!-- Hair Color Selector -->
     <div class="hair-colors w-100">
         <select id="search_by_hair_color" class="hairColorSelect">
-            <option value="">Hair Color</option>
+            <option value="">Hair Colour</option>
             @foreach($hairColors as $item)
             <option @if(!empty(request()->get("hair_color_id")) && request()->get("hair_color_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach

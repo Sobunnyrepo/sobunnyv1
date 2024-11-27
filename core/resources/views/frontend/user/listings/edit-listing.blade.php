@@ -292,9 +292,9 @@
                                                     <div class="row g-3 mt-3">
                                                         <div class="col-sm-4">
                                                             <div class="item-catagory-wraper">
-                                                                <label for="item-catagory">{{ __('EyeColor') }} <span class="text-danger">*</span></label>
+                                                                <label for="item-catagory">{{ __('Eye Colour') }} <span class="text-danger">*</span></label>
                                                                 <select name="eye_color_id" id="eyeColor" class="select-itms select2_activation">
-                                                                    <option value="">{{ __('Select EyeColor') }}</option>
+                                                                    <option value="">{{ __('Select') }}</option>
                                                                     @foreach ($eyeColors as $cat)
                                                                         <option value="{{ $cat->id }}" @if($listing->eyecolor_id == $cat->id) selected @endif>
                                                                             {{ $cat->name }}
@@ -306,9 +306,9 @@
                                                     
                                                         <div class="col-sm-4">
                                                             <div class="item-catagory-wraper">
-                                                                <label for="item-catagory">{{ __('HairColor') }} <span class="text-danger">*</span></label>
+                                                                <label for="item-catagory">{{ __('Hair Colour') }} <span class="text-danger">*</span></label>
                                                                 <select name="hair_color_id" id="HairColor" class="select-itms select2_activation">
-                                                                    <option value="">{{ __('Select HairColor') }}</option>
+                                                                    <option value="">{{ __('Select') }}</option>
                                                                     @foreach ($hairColors as $item)
                                                                         <option value="{{ $item->id }}" @if($listing->hair_color_id == $item->id) selected @endif>
                                                                             {{ $item->name }}

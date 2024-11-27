@@ -129,8 +129,8 @@ SOCIALICON;
                     <a href="{$route}" class="footer-logo">{$logo}</a>
                 </div>
                 <ul class="listing">
-                    <li class="listItem wow fadeInUp" data-wow-delay="0.0s"><a href="#" class="singleLinks"> <i class="{$address_icon} icon"></i> {$address}</a></li>
-                    <li class="listItem wow fadeInUp" data-wow-delay="0.0s"> <a href="#" class="singleLinks"> <i class="{$phone_icon} icon"></i> {$phone}</a></li>
+                    <!-- <li class="listItem wow fadeInUp" data-wow-delay="0.0s"><a href="#" class="singleLinks"> <i class="{$address_icon} icon"></i> {$address}</a></li>
+                    <li class="listItem wow fadeInUp" data-wow-delay="0.0s"> <a href="#" class="singleLinks"> <i class="{$phone_icon} icon"></i> {$phone}</a></li> -->
                     <li class="listItem wow fadeInUp" data-wow-delay="0.0s"> <a href="#" class="singleLinks"> <i class="{$email_icon} icon"></i> {$email}</a></li>
                 </ul>
                  <div class="footer-social2">
