@@ -23,7 +23,7 @@
                                href="#upload_files" role="tab" aria-selected="true">{{__('Upload Files')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
+                            <a class="nav-link selectImgBox"
                                data-bs-toggle="tab"
                                href="#media_library" role="tab" id="load_all_media_images" aria-controls="media_library" aria-selected="false">{{__('Media Library')}}</a>
                         </li>
