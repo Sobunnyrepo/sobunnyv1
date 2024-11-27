@@ -21,6 +21,18 @@ class ApplyListingFilters
         $field = $filter->getField();
         $operator = $filter->getOperator();
         $value = $filter->getValue();
+
+        if ($filter->isOrWhere()) {
+            $fields = $filter->getOrwhere();
+            foreach ($fields as $index => $subField) {
+                if ($index === 0) {
+                    $builder = $builder->where($subField, $operator, $value);
+                    continue;
+                }
+                $builder = $builder->orWhere($subField, $operator, $value);
+            }
+            return $builder;
+        }
         return $builder->where($field, $operator, $value);
     }
 }

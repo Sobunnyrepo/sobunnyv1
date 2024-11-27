@@ -58,7 +58,10 @@ class CreateDefaultFilters
             $params[] = new FilterParam('height_id', $heightId);
         }        
         if($cityId !== null) {
-            $params[] = new FilterParam('city_id', $cityId);
+            $params[] = new FilterParam('city_id', $cityId,  '=', ['city_id','second_city_id', 'third_city_id']);
+            // $params[] = new FilterParam('city_id', $cityId);
+            // $params[] = new FilterParam('second_city_id', $cityId);
+            // $params[] = new FilterParam('third_city_id', $cityId);
         }
         return $params;
     }

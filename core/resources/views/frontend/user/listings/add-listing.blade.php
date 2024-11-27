@@ -258,7 +258,7 @@
                                                                         <option value="">{{ __('Select Gender') }}
                                                                         </option>
                                                                         @foreach ($genders as $cat)
-                                                                            <option value="{{ $cat->id }}">
+                                                                            <option value="{{ $cat->id }}" {{ old('gender_id') == $cat->id ? 'selected' : '' }}>
                                                                                 {{ $cat->name }}</option>
                                                                         @endforeach
                                                                     </select>
@@ -274,9 +274,9 @@
                                                                         class="select-itms select2_activation">
                                                                         <option value="">
                                                                             {{ __('Select Ethnicity') }}</option>
-                                                                        @foreach ($ethnicities as $item)
-                                                                            <option value="{{ $item->id }}">
-                                                                                {{ $item->name }}</option>
+                                                                        @foreach ($ethnicities as $cat)
+                                                                        <option value="{{ $cat->id }}" {{ old('ethnicity_id') == $cat->id ? 'selected' : '' }}>
+                                                                            {{ $cat->name }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -291,7 +291,7 @@
                                                                         <option value="">{{ __('Select Age') }}
                                                                         </option>
                                                                         @foreach ($ages as $item)
-                                                                            <option value="{{ $item->id }}">
+                                                                            <option value="{{ $item->id }}" {{ old('age_id') == $item->id ? 'selected' : '' }}>
                                                                                 {{ $item->name }}</option>
                                                                         @endforeach
                                                                     </select>
@@ -310,13 +310,12 @@
                                                                         <option value="">{{ __('Select Breasts') }}
                                                                         </option>
                                                                         @foreach ($breasts as $cat)
-                                                                            <option value="{{ $cat->id }}">
+                                                                            <option value="{{ $cat->id }}" {{ old('breasts_id') == $cat->id ? 'selected' : '' }}>
                                                                                 {{ $cat->name }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
                                                             </div>
-
 
                                                             <div class="col-sm-4">
                                                                 <div class="item-catagory-wraper">
@@ -327,7 +326,7 @@
                                                                         <option value="">{{ __('Select Cater') }}
                                                                         </option>
                                                                         @foreach ($caters as $item)
-                                                                            <option value="{{ $item->id }}">
+                                                                            <option value="{{ $item->id }}" {{ old('cater_id') == $item->id ? 'selected' : '' }}>
                                                                                 {{ $item->name }}</option>
                                                                         @endforeach
                                                                     </select>
@@ -343,7 +342,7 @@
                                                                         <option value="">
                                                                             {{ __('Select Body Type') }}</option>
                                                                         @foreach ($bodyTypes as $item)
-                                                                            <option value="{{ $item->id }}">
+                                                                            <option value="{{ $item->id }}" {{ old('body_type_id') == $item->id ? 'selected' : '' }}>
                                                                                 {{ $item->name }}</option>
                                                                         @endforeach
                                                                     </select>
@@ -359,7 +358,7 @@
                                                                     <select name="eye_color_id" id="eyeColor" class="select-itms select2_activation">
                                                                         <option value="">{{__('Select EyeColor')}}</option>
                                                                         @foreach($eyeColors as $cat)
-                                                                            <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                                                            <option value="{{ $cat->id }}" {{ old('eye_color_id') == $cat->id ? 'selected' : '' }}>{{ $cat->name }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -372,7 +371,7 @@
                                                                     <select name="hair_color_id" id="HairColor" class="select-itms select2_activation">
                                                                         <option value="">{{__('Select HairColor')}}</option>
                                                                         @foreach($hairColors as $item)
-                                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                            <option value="{{ $item->id }}" {{ old('hair_color_id') == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -384,7 +383,7 @@
                                                                     <select name="service_type_id" id="service_type" class="select-itms select2_activation">
                                                                         <option value="">{{__('Select Service Type')}}</option>
                                                                         @foreach($serviceTypes as $item)
-                                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                            <option value="{{ $item->id }}" {{ old('service_type_id') == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -397,9 +396,9 @@
                                                                 <div class="item-catagory-wraper">
                                                                     <label for="item-catagory">{{ __('Servicing') }} <span class="text-danger">*</span> </label>
                                                                     <select name="servicing_id" id="servicing" class="select-itms select2_activation">
-                                                                        <option value="">{{__('Select Servicing')}}</option>
+                                                                        <option value="">{{ __('Select Servicing') }}</option>
                                                                         @foreach($servicings as $cat)
-                                                                            <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                                                            <option value="{{ $cat->id }}" {{ old('servicing_id') == $cat->id ? 'selected' : '' }}>{{ $cat->name }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -412,7 +411,7 @@
                                                                     <select name="heights_id" id="heights" class="select-itms select2_activation">
                                                                         <option value="">{{__('Select Heights')}}</option>
                                                                         @foreach($heights as $item)
-                                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                            <option value="{{ $item->id }}" {{ old('heights_id') == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -671,6 +670,18 @@
                                                         <label for="city">{{ __('Select Your City') }}</label>
                                                         <select name="city_id" id="city_id" class="select2_activation">
                                                             <option value="">{{ __('Select City') }}</option>
+                                                            @foreach ($all_cities as $city)
+                                                                <option value="{{ $city->id }}">{{ $city->city }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="address-text mt-3">
+                                                    <div class="city">
+                                                        <label for="city">Select Aditional Cities (Max 2)</label>
+                                                        <select name="more_cities_id[]" id="more_cities_id" class="select2_activation" multiple="multiple" data-max-options="2">
                                                             @foreach ($all_cities as $city)
                                                                 <option value="{{ $city->id }}">{{ $city->city }}</option>
                                                             @endforeach

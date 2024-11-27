@@ -540,6 +540,18 @@
                                                     </select>
                                                 </div>
                                             </div>
+
+                                            <div class="address-text mt-3">
+                                                <div class="city">
+                                                    <label for="city">Select Aditional Cities (Max 2)</label>
+                                                    <select name="more_cities_id[]" id="more_cities_id" class="select2_activation" multiple="multiple" data-max-options="2">
+                                                        @foreach ($all_cities as $city)
+                                                            <option value="{{ $city->id }}" @if($city->id == $listing->second_city_id || $city->id == $listing->third_city_id) selected @endif>{{ $city->city }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                             {{-- <div class="address-text mt-3">
                                                 <input type="hidden" name="latitude" id="latitude" value="{{$listing->lat}}">
                                                 <input type="hidden" name="longitude" id="longitude" value="{{$listing->lon}}">
