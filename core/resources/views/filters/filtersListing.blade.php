@@ -60,14 +60,31 @@
     </div>
 
     <!-- Cater Selector -->
-    <div class="caters w-100">
+    {{-- <div class="caters w-100">
         <select id="search_by_cater" class="caterSelect">
             <option value="">Cater</option>
             @foreach($caters as $item)
             <option @if(!empty(request()->get("cater_id")) && request()->get("cater_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
+    </div> --}}
+
+    <div class="col-sm-4">
+        <div class="item-catagory-wraper">
+            <label for="item-catagory">{{ __('Caters') }}</label>
+            @foreach ($caters as $item)
+                <div class="form-check">
+                    <input class="form-check-input cater_{{$item->id}}" type="checkbox" name="cater_{{ $item->id }}" value="{{ $item->id }}" id="cater_{{ $item->id }}" {{ request()->get('cater_' . $item->id) == 1 ? 'checked' : '' }}>
+
+                    <label class="form-check-label" for="cater_{{ $item->id }}">
+                        {{ $item->name }}
+                    </label>
+                </div>
+            @endforeach
+        </div>
     </div>
+
+
 
     <!-- Body Type Selector -->
     <div class="body-types w-100">

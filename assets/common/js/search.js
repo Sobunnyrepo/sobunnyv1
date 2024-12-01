@@ -5,7 +5,9 @@ $(document).ready(function() {
         let gender = $('#search_by_gender').val();
         let age = $('#search_by_age').val();
         let breast = $('#search_by_breasts').val();
-        let cater = $('#search_by_cater').val();
+        let cater1 = $('.cater_1').is(':checked') ? 1 : 0;
+        let cater2 = $('.cater_2').is(':checked') ? 1 : 0;
+        let cater3 = $('.cater_3').is(':checked') ? 1 : 0;
         let bodyType = $('#search_by_body_type').val();
         let eyeColor = $('#search_by_eye_color').val();
         let hairColor = $('#search_by_hair_color').val();
@@ -19,7 +21,9 @@ $(document).ready(function() {
         form.append(`<input type="hidden" name="ethnicity_id" value="${ethnicity}">`);
         form.append(`<input type="hidden" name="age_id" value="${age}">`);
         form.append(`<input type="hidden" name="breast_id" value="${breast}">`);
-        form.append(`<input type="hidden" name="cater_id" value="${cater}">`);
+        form.append(`<input type="hidden" name="cater_1" value="${cater1}">`);
+        form.append(`<input type="hidden" name="cater_2" value="${cater2}">`);
+        form.append(`<input type="hidden" name="cater_3" value="${cater3}">`);
         form.append(`<input type="hidden" name="body_type_id" value="${bodyType}">`);
         form.append(`<input type="hidden" name="eye_color_id" value="${eyeColor}">`);
         form.append(`<input type="hidden" name="hair_color_id" value="${hairColor}">`);

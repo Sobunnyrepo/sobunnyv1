@@ -321,17 +321,17 @@
                                                                 <div class="item-catagory-wraper">
                                                                     <label for="item-catagory">{{ __('Caters') }}
                                                                         <span class="text-danger">*</span> </label>
-                                                                    <select name="cater_id" id="cater"
-                                                                        class="select-itms select2_activation">
-                                                                        <option value="">{{ __('Select') }}
-                                                                        </option>
-                                                                        @foreach ($caters as $item)
-                                                                            <option value="{{ $item->id }}" {{ old('cater_id') == $item->id ? 'selected' : '' }}>
-                                                                                {{ $item->name }}</option>
-                                                                        @endforeach
-                                                                    </select>
+                                                                    @foreach ($caters as $item)
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="checkbox" name="cater_{{ $item->id }}" value="{{ $item->id }}" id="cater_{{ $item->id }}" {{ in_array($item->id, old('cater_id', [])) ? 'checked' : '' }}>
+                                                                            <label class="form-check-label" for="cater_{{ $item->id }}">
+                                                                                {{ $item->name }}
+                                                                            </label>
+                                                                        </div>
+                                                                    @endforeach
                                                                 </div>
                                                             </div>
+
 
                                                             <div class="col-sm-4">
                                                                 <div class="item-age-wraper">

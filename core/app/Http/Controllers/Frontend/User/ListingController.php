@@ -167,7 +167,7 @@ class ListingController extends Controller
                 'ethnicity_id' => 'required',
                 'age_id' => 'required',
                 'breasts_id' => 'required',
-                'cater_id' => 'required',
+                // 'cater_id' => 'required',
                 'body_type_id' => 'required',
                 'eye_color_id' => 'required',
                 'hair_color_id' => 'required',
@@ -248,6 +248,11 @@ class ListingController extends Controller
             $listing->servicing_id = $request->input('servicing_id');
             $listing->height_id = $request->input('heights_id');
             $listing->city_id = $request->input('city_id');
+            $listing->cater_1 = !!$request->input('cater_1');
+            $listing->cater_2 = !!$request->input('cater_2');
+            $listing->cater_3 = !!$request->input('cater_3');
+
+
             if ($request->input('more_cities_id')) {
                 $listing->second_city_id = $request->input('more_cities_id')[0];
                 $listing->third_city_id = $request->input('more_cities_id')[1];
@@ -421,7 +426,7 @@ class ListingController extends Controller
                 'ethnicity_id' => 'required',
                 'age_id' => 'required',
                 'breasts_id' => 'required',
-                'cater_id' => 'required',
+                // 'cater_id' => 'required',
                 'body_type_id' => 'required',
                 'eye_color_id' => 'required',
                 'hair_color_id' => 'required',
@@ -498,6 +503,10 @@ class ListingController extends Controller
             $listing->servicing_id = $request->input('servicing_id');
             $listing->height_id = $request->input('heights_id');
             $listing->city_id = $request->input('city_id');
+            $listing->cater_1 = !!$request->input('cater_1');
+            $listing->cater_2 = !!$request->input('cater_2');
+            $listing->cater_3 = !!$request->input('cater_3');
+
             if ($request->input('more_cities_id')) {
                 $listing->second_city_id = $request->input('more_cities_id')[0];
                 $listing->third_city_id = $request->input('more_cities_id')[1];
