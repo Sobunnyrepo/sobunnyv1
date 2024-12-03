@@ -38,13 +38,13 @@
                     <div class="btn-wrapper">
                         <button type="button" class="red-global-close-btn" data-bs-dismiss="modal">{{ __('Close') }}</button>
                         @if (Auth::guard('web')->check())
-                        <button type="button" class="red-global-btn buy_membership" id="buyBitcoin">
+                        {{-- <button type="button" class="red-global-btn buy_membership" id="buyBitcoin">
                             {{ __('Buy Now') }} <span id="buy_membership_load_spinner"></span>
-                        </button>
+                        </button> --}}
 
-                            {{-- <button type="submit" class="red-global-btn buy_membership" id="confirm_buy_membership_load_spinner">
+                            <button type="submit" class="red-global-btn buy_membership" id="confirm_buy_membership_load_spinner">
                                 {{ __('Buy Now') }} <span id="buy_membership_load_spinner"></span>
-                            </button> --}}
+                            </button>
                         @endif
                     </div>
                 </div>

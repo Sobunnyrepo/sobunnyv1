@@ -14,17 +14,33 @@ class PaymentController extends Controller
         info($request->input());
         info(auth()->user()->id);
 
+        // $response = Http::withHeaders([
+        //     'x-api-key' => 'ZCRRBS4-2B64SGZ-M32E1K9-51K02FD',
+        //     'Content-Type' => 'application/json',
+        // ])->post('https://api.nowpayments.io/v1/payment', [
+        //     'price_amount' => 20,
+        //     'price_currency' => 'usd', // Monto expresado en USD
+        //     'pay_currency' => 'btc', // Moneda de pago: Bitcoin
+        //     'ipn_callback_url' => 'https://sobunny.com/print-request',
+        //     'order_id' => "user-".auth()->user()->id,
+        //     'order_description' => "Pago con Bitcoin del usuario con ID ".auth()->user()->id,
+        // ]);
+
         $response = Http::withHeaders([
             'x-api-key' => 'ZCRRBS4-2B64SGZ-M32E1K9-51K02FD',
             'Content-Type' => 'application/json',
         ])->post('https://api.nowpayments.io/v1/payment', [
-            'price_amount' => 10,
+            'price_amount' => 25,
             'price_currency' => 'usd', // Monto expresado en USD
             'pay_currency' => 'btc', // Moneda de pago: Bitcoin
             'ipn_callback_url' => 'https://sobunny.com/print-request',
-            'order_id' => "user-".auth()->user()->id,
-            'order_description' => "Pago con Bitcoin del usuario con ID ".auth()->user()->id,
+            'order_id' => "usuario_{1}",
+            'order_description' => "Pago con Bitcoin del usuario con ID {1}",
         ]);
+        if ($response->successful()) {
+            info($response->json());
+        }
+
         $response = $response->json();
         info('response');
         info($response);
