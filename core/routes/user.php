@@ -6,9 +6,12 @@ use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\User\UserController;
 use App\Http\Controllers\Frontend\User\AccountSettingController;
 use App\Http\Controllers\Frontend\User\ListingController;
+use App\Http\Controllers\Frontend\User\PaymentController;
 
 // client
 Route::group(['prefix'=>'user','as'=>'user.'],function() {
+
+    Route::resource('payments',PaymentController::class)->only('store');
 
     Route::group(['middleware'=>['auth','globalVariable', 'maintains_mode','setlang']],function(){
         Route::controller(UserController::class)->group(function () {

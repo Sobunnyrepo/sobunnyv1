@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Artisan;
 | simple approach to interacting with each command's IO methods.
 |
 */
-
+Route::post('/print-request', function (\Illuminate\Http\Request $request) {
+    info('print-request');
+    info($request->all());
+    return response()->json($request->all());
+});
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');

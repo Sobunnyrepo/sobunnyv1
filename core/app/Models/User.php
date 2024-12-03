@@ -21,6 +21,8 @@ use Modules\Wallet\app\Models\Wallet;
 
 class User extends Authenticatable
 {
+    public const CLIENT_ROLE = 'client';
+    public const PROVIDER_ROLE = 'provider';
     use HasApiTokens, HasFactory, Notifiable, softDeletes;
 
     /**
@@ -56,6 +58,8 @@ class User extends Authenticatable
         'verified_status',
         'is_suspend',
         'status',
+        'birthdate',
+        'role'
     ];
 
     /**

@@ -81,6 +81,8 @@
                             {{ __('Dashboard') }}
                         </a>
                     </li>
+                    @if(Auth::user()->role!='client')
+
                     <li class="list">
                         <a class="list-title" href="{{ route('user.all.listing') }}">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
@@ -92,6 +94,7 @@
                             {{ __('All Listing') }}
                         </a>
                     </li>
+                    @endif
                     @if (moduleExists('Membership'))
                         @if (membershipModuleExistsAndEnable('Membership'))
                             <li class="list">
@@ -255,6 +258,7 @@
         </li>
     @endif
     @if (Auth::check())
+    @if(Auth::user()->role!='client')
         <li class="single">
             <div class="btn-wrapper">
                 <a href="{{ route('user.add.listing') }}" class="cmn-btn1 popup-modal">
@@ -262,6 +266,7 @@
                 </a>
             </div>
         </li>
+        @endif
     @else
         <li class="single">
             <div class="btn-wrapper">

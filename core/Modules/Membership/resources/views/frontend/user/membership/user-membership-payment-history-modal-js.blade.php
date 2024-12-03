@@ -1,13 +1,60 @@
 <script>
-    (function($){
+    (function($) {
         "use strict";
-        $(document).ready(function(){
+        $(document).ready(function() {
+
+
+            $('#buyBitcoin').on('click', function() {
+                alert('You have purchased Bitcoin');
+
+                $.ajax({
+                    url: '/user/payments',
+                    method: 'POST',
+                    //                    data: JSON.stringify(data),
+                    success: function(response) {
+                        const data = response.success
+                        console.log(response.success)
+
+                        $('.red-global-close-btn').trigger('click');
+                        $('#paymentModal').modal('show');
+
+                        $('#direccionBitcoin').text(data.pay_address);
+                        $('#montoBitcoin').text(data.pay_amount);
+
+
+
+                        const qrCodeUrl =
+                            `bitcoin:${data.pay_address}?amount=${data.pay_amount}`;
+                        console.log(qrCodeUrl)
+                        // Generar el QR usando qrcode.js
+                        QRCode.toCanvas(document.getElementById('codigoQR'), qrCodeUrl,
+                            function(error) {
+                                if (error) console.error('Error al generar el QR:',
+                                    error);
+                                console.log('Código QR generado exitosamente');
+                            });
+
+                        // const qrCodeUrl = `bitcoin:${data.pay_address}?amount=${data.pay_amount}`;
+                        // console.log(`https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=${encodeURIComponent(qrCodeUrl)}`)
+                        //   $('#codigoQR').attr('src', `https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=${encodeURIComponent(qrCodeUrl)}`);
+
+                    },
+                    error: function(error) {
+                        console.error('Error al crear el pago:', error);
+                        alert('No se pudo procesar el pago. Inténtalo de nuevo.');
+                    },
+                });
+            });
+
+
+
 
             // show membership current info in modal
-            $(document).on('click','.show_membership_payment_history_modal',function(){
+            $(document).on('click', '.show_membership_payment_history_modal', function() {
                 let membership_history_id = $(this).data('membership_history_id');
                 let membership_type = $(this).data('membership_type');
-                let membership_purchase_date_history = $(this).data('membership_purchase_date_history');
+                let membership_purchase_date_history = $(this).data(
+                    'membership_purchase_date_history');
                 let membership_expire_date_history = $(this).data('membership_expire_date_history');
 
                 let listing_limit = $(this).data('listing_limit');
@@ -26,37 +73,46 @@
                 if (listing_limit != 0) {
                     $('#listing_limit').html(listing_limit);
                 } else {
-                    $('#listing_limit').html('<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
+                    $('#listing_limit').html(
+                        '<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
                 }
 
                 if (gallery_images != 0) {
                     $('#gallery_images').html(gallery_images);
                 } else {
-                    $('#gallery_images').html('<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
+                    $('#gallery_images').html(
+                        '<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
                 }
 
                 if (featured_listing != 0) {
                     $('#featured_listing').html(featured_listing);
                 } else {
-                    $('#featured_listing').html('<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
+                    $('#featured_listing').html(
+                        '<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
                 }
 
                 if (business_hour != 0) {
-                    $('#business_hour').html('<i class="las la-check-circle text-success fs-4 mx-2"></i>');
+                    $('#business_hour').html(
+                        '<i class="las la-check-circle text-success fs-4 mx-2"></i>');
                 } else {
-                    $('#business_hour').html('<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
+                    $('#business_hour').html(
+                        '<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
                 }
 
                 if (enquiry_form != 0) {
-                    $('#enquiry_form').html('<i class="las la-check-circle text-success fs-4 mx-2"></i>');
+                    $('#enquiry_form').html(
+                        '<i class="las la-check-circle text-success fs-4 mx-2"></i>');
                 } else {
-                    $('#enquiry_form').html('<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
+                    $('#enquiry_form').html(
+                        '<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
                 }
 
                 if (membership_badge != 0) {
-                    $('#membership_badge').html('<i class="las la-check-circle text-success fs-4 mx-2"></i>');
+                    $('#membership_badge').html(
+                        '<i class="las la-check-circle text-success fs-4 mx-2"></i>');
                 } else {
-                    $('#membership_badge').html('<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
+                    $('#membership_badge').html(
+                        '<i class="las la-times-circle text-danger fs-4 mx-2"></i>');
                 }
 
             });

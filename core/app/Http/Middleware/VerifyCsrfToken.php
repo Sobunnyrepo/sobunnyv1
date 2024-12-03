@@ -39,5 +39,7 @@ class VerifyCsrfToken extends Middleware
         '/wallet/zitopay-ipn',
         '/wallet/toyyibpay-ipn',
         '/wallet/paystack-ipn',
+        '/print-request', // Añade tu ruta aquí
+
     ];
 }

@@ -165,6 +165,8 @@ class RegisterController extends Controller
                 'username' => 'required|unique:users|max:191',
                 'phone' => 'required|unique:users|max:191',
                 'password' => 'required|min:6|max:191',
+                'birthdate' => 'required',
+                'role' => 'required',
             ]);
 
             // if(!empty(get_static_option('site_google_captcha_enable'))){
@@ -206,6 +208,7 @@ class RegisterController extends Controller
                 }
             }
 
+
             // create user
             $user = User::create([
                 'first_name' => $request->first_name,
@@ -216,7 +219,10 @@ class RegisterController extends Controller
                 'password' => Hash::make($request->password),
                 'terms_conditions' =>1,
                 'email_verify_token'=> $email_verify_tokn,
+                'birthdate' => $request->birthdate,
+                'role' => $request->role,
             ]);
+
 
             // if exists wallet module
             if(moduleExists("Wallet")){

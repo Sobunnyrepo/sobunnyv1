@@ -148,6 +148,38 @@
                    </div>
                 </div>
             </div>
+
+
+            <!-- New Modal -->
+            <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="newModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="newModalLabel">{{ __('New Modal Title') }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div>
+                                <h3>Make your payment in Bitcoin</h3>
+                                <p><strong>Bitcoin Address:</strong> <span id="direccionBitcoin"></span></p>
+                                <p><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
+                                {{-- <img id="codigoQRImg" alt="Scan this QR code to pay" /> --}}
+                                <canvas id="codigoQR"></canvas>
+
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('Close') }}</button>
+                            <button type="button" class="btn btn-primary">{{ __('Save changes') }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
     @include('membership::addon-view.gateway-markup')
@@ -160,3 +192,4 @@
     @include('membership::frontend.user.membership.membership-js')
     @include('membership::frontend.user.membership.user-membership-payment-history-modal-js')
 @endsection
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>

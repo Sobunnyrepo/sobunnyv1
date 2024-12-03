@@ -82,6 +82,10 @@ class ListingController extends Controller
 
     public function allListing(Request $request)
     {
+        if(auth()->user()->role==User::CLIENT_ROLE)
+        {
+            return redirect()->route('user.dashboard');
+        }
         $listings = Listing::where('user_id', Auth::guard('web')->user()->id)->latest()->paginate(5);
         return view('frontend.user.listings.all-listings', compact('listings'));
     }
@@ -90,6 +94,10 @@ class ListingController extends Controller
     public function addListing(Request $request)
     {
 
+        if(auth()->user()->role==User::CLIENT_ROLE)
+        {
+            return redirect()->route('user.dashboard');
+        }
         // Check Membership Status
         if (moduleExists('Membership') && membershipModuleExistsAndEnable('Membership')) {
             $user_membership_check = UserMembership::where('user_id', Auth::guard('web')->user()->id)->first();

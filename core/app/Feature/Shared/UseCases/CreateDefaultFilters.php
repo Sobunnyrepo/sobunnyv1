@@ -55,11 +55,6 @@ class CreateDefaultFilters
         if ($cater1 !== null || $cater2 !== null || $cater3 !== null) {
             $params[] = new FilterParam('city_id', 1,  '=', $caters);
         }
-        // dump($cater1);
-        // dump($cater2);
-        // dump($cater3);
-        // dump($caters);
-
         if ($bodyTypeId !== null) {
             $params[] = new FilterParam('body_type_id', $bodyTypeId);
         }
@@ -81,12 +76,7 @@ class CreateDefaultFilters
         }
         if ($cityId !== null) {
             $params[] = new FilterParam('city_id', $cityId,  '=', ['city_id', 'second_city_id', 'third_city_id']);
-            // $params[] = new FilterParam('city_id', $cityId);
-            // $params[] = new FilterParam('second_city_id', $cityId);
-            // $params[] = new FilterParam('third_city_id', $cityId);
         }
-        // dd(request()->all());
-        // dd($params);
         return $params;
     }
 }
