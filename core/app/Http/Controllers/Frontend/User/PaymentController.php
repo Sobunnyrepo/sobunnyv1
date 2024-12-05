@@ -12,8 +12,7 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         info($request->input());
-        info(auth()->user()->id);
-
+        info(auth()->user());
         // $response = Http::withHeaders([
         //     'x-api-key' => 'ZCRRBS4-2B64SGZ-M32E1K9-51K02FD',
         //     'Content-Type' => 'application/json',
@@ -34,7 +33,7 @@ class PaymentController extends Controller
             'price_currency' => 'usd', // Monto expresado en USD
             'pay_currency' => 'btc', // Moneda de pago: Bitcoin
             'ipn_callback_url' => 'https://sobunny.com/print-request',
-            'order_id' => "usuario_{1}",
+            'order_id' => "usuario_".auth()->user()->first_name.now(),
             'order_description' => "Pago con Bitcoin del usuario con ID {1}",
         ]);
         if ($response->successful()) {

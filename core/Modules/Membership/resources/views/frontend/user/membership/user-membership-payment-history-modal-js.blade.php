@@ -5,7 +5,7 @@
 
 
             $('#buyBitcoin').on('click', function() {
-                alert('You have purchased Bitcoin');
+                // alert('You have purchased Bitcoin');
 
                 $.ajax({
                     url: '/user/payments',
