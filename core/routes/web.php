@@ -22,12 +22,12 @@ use \App\Http\Controllers\Frontend\FrontendUserProfileController;
 
 
 Route::post('/print-request', function (\Illuminate\Http\Request $request) {
-    info('print-request');
+    info('GET print-request');
     info($request->all());
     return response()->json($request->all());
 });
 Route::get('/print-request', function (\Illuminate\Http\Request $request) {
-    info('print-request');
+    info('POST print-request');
     info($request->all());
     return 2;
     return response()->json($request->all());
