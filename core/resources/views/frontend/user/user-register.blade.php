@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 mt-3">
+                            <div class="col-lg-6 col-md-12">
                                 <label class="infoTitle">{{ __('Confirm Password') }}</label>
                                 <div class="input-form">
                                     <input type="password" name="confirm_password" id="confirm_password" placeholder="{{ __('Confirm Password') }}">
@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <label class="infoTitle">{{ __('Select Role') }}</label>
+                                <label class="infoTitle">{{ __('Account Type') }}</label>
                                 <div class="input-form">
                                     <select name="role" id="role" required>
                                         {{-- <option value="">{{ __('Select Role') }}</option> --}}
