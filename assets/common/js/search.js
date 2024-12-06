@@ -14,22 +14,23 @@ $(document).ready(function() {
         let serviceType = $('#search_by_service_type').val();
         let servicing = $('#search_by_servicing').val();
         let height = $('#search_by_heights').val();
-
+        let cityId = $('#city_id').val();
         let form = $('#search_listings_form');
 
-        form.append(`<input type="hidden" name="gender_id" value="${gender}">`);
-        form.append(`<input type="hidden" name="ethnicity_id" value="${ethnicity}">`);
-        form.append(`<input type="hidden" name="age_id" value="${age}">`);
-        form.append(`<input type="hidden" name="breast_id" value="${breast}">`);
-        form.append(`<input type="hidden" name="cater_1" value="${cater1}">`);
-        form.append(`<input type="hidden" name="cater_2" value="${cater2}">`);
-        form.append(`<input type="hidden" name="cater_3" value="${cater3}">`);
-        form.append(`<input type="hidden" name="body_type_id" value="${bodyType}">`);
-        form.append(`<input type="hidden" name="eye_color_id" value="${eyeColor}">`);
-        form.append(`<input type="hidden" name="hair_color_id" value="${hairColor}">`);
-        form.append(`<input type="hidden" name="service_type_id" value="${serviceType}">`);
-        form.append(`<input type="hidden" name="servicing_id" value="${servicing}">`);
-        form.append(`<input type="hidden" name="height_id" value="${height}">`);
+        if (gender) form.append(`<input type="hidden" name="gender_id" value="${gender}">`);
+        if (cityId) form.append(`<input type="hidden" name="city_id" value="${cityId}">`);
+        if (ethnicity) form.append(`<input type="hidden" name="ethnicity_id" value="${ethnicity}">`);
+        if (age) form.append(`<input type="hidden" name="age_id" value="${age}">`);
+        if (breast) form.append(`<input type="hidden" name="breast_id" value="${breast}">`);
+        if (cater1) form.append(`<input type="hidden" name="cater_1" value="${cater1}">`);
+        if (cater2) form.append(`<input type="hidden" name="cater_2" value="${cater2}">`);
+        if (cater3) form.append(`<input type="hidden" name="cater_3" value="${cater3}">`);
+        if (bodyType) form.append(`<input type="hidden" name="body_type_id" value="${bodyType}">`);
+        if (eyeColor) form.append(`<input type="hidden" name="eye_color_id" value="${eyeColor}">`);
+        if (hairColor) form.append(`<input type="hidden" name="hair_color_id" value="${hairColor}">`);
+        if (serviceType) form.append(`<input type="hidden" name="service_type_id" value="${serviceType}">`);
+        if (servicing) form.append(`<input type="hidden" name="servicing_id" value="${servicing}">`);
+        if (height) form.append(`<input type="hidden" name="height_id" value="${height}">`);
         form.submit();
     });
 });

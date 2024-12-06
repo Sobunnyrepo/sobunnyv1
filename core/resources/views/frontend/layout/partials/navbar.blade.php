@@ -14,5 +14,6 @@
     $servicings = $categoriesService->getAllServicings->__invoke();
     $heights = $categoriesService->getAllHeighs->__invoke();
     $current_page_url = URL::current();
+    $cities = Modules\CountryManage\app\Models\City::all();
 @endphp
 @include('frontend.layout.partials.navbar-variant.navbar-' . $navbar_variant)
