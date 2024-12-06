@@ -1,4 +1,4 @@
-@if(moduleExists("Chat"))
+{{-- @if(moduleExists("Chat"))
     @if(is_null($listing->admin_id) && $listing->user_id != null && $listing->user_id != 0)
         @if(auth()->check() && Auth::guard('web')->user()->id !== $listing->user_id)
             @if(auth()->check())
@@ -34,7 +34,7 @@
             @endif
         @endif
     @endif
-@endif
+@endif --}}
 
 @if(empty($listing->admin_id))
     {{-- <div class="seller-details box-shadow1">

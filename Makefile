@@ -32,7 +32,7 @@ import-db-old:
 	@docker exec -i mysql-sobunny mysql -u user -ppassword -e "DROP DATABASE IF EXISTS db; CREATE DATABASE db;"
 	@docker exec -i mysql-sobunny mysql -u user -ppassword db < sobunny_db.sql
 pull-server-database:
-	scp root@$(SERVER_IP):/home/sobunny/sobunny.sql .
+	scp root@$(SERVER_IP):/home/sobunnyv1/sobunny.sql .
 pull-report-virus:
 	scp root@$(SERVER_IP):/var/log/rkhunter.log .
 iqnews-server:

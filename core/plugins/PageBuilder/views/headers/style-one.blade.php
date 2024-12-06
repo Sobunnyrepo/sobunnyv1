@@ -49,7 +49,7 @@
                             <div class="city">
                                 {{-- <label for="city">{{ __('Select Your City') }}</label> --}}
                                 <select name="city_id" id="city_id" class="select2_activation">
-                                    <option value="">{{ __('Select City') }}</option>
+                                    <option value="">{{ __('Select Location') }}</option>
                                     @foreach ($cities as $city)
                                         <option value="{{ $city->id }}">{{ $city->city }}</option>
                                     @endforeach

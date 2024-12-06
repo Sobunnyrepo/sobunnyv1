@@ -10,14 +10,22 @@
             >{{ __('Search') }}</button>
         </div>
 
-        <div class="suburb_section_start">
+        {{-- <div class="suburb_section_start">
             <input type="hidden" name="autocomplete_address" id="autocomplete_address">
             <input type="hidden" name="location_city_name" id="location_city_name">
             <input type="hidden" name="latitude" id="latitude">
             <input type="hidden" name="longitude" id="longitude">
             <label class="cateTitle mb-2">{{ __('Location') }}</label>
-            <input class="search-input form-control w-100 border-1 bg-white autocomplete_disable" name="autocomplete" id="autocomplete" placeholder="{{ __('Enter a Location') }}" type="text">
-        </div>
+            <input class="search-input form-control w-100 border-1 bg-white autocomplete_disable" name="autocomplete" id="autocomplete" placeholder="{{ __('Enter Location') }}" type="text">
+        </div> --}}
+
+
+        <select name="city_id" id="city_id" class="select2_activation">
+            <option value="">{{ __('Select Location') }}</option>
+            @foreach ($cities as $city)
+                <option value="{{ $city->id }}">{{ $city->city }}</option>
+            @endforeach
+        </select>
 
     <!-- Gender Selector -->
     <div class="genders w-100">
@@ -40,24 +48,24 @@
     </div>
 
     <!-- Age Selector -->
-    <div class="ages w-100">
+    {{-- <div class="ages w-100">
         <select id="search_by_age" class="ageSelect">
             <option value="">Age</option>
             @foreach($ages as $item)
             <option @if(!empty(request()->get("age_id")) && request()->get("age_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
-    </div>
+    </div> --}}
 
     <!-- Breasts Selector -->
-    <div class="breasts w-100">
+    {{-- <div class="breasts w-100">
         <select id="search_by_breasts" class="breastsSelect">
             <option value="">Breasts</option>
             @foreach($breasts as $item)
             <option @if(!empty(request()->get("breast_id")) && request()->get("breast_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
-    </div>
+    </div> --}}
 
     <!-- Cater Selector -->
     {{-- <div class="caters w-100">
@@ -69,7 +77,7 @@
         </select>
     </div> --}}
 
-    <div class="col-sm-4">
+    {{-- <div class="col-sm-4">
         <div class="item-catagory-wraper">
             <label for="item-catagory">{{ __('Caters') }}</label>
             @foreach ($caters as $item)
@@ -82,7 +90,7 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </div> --}}
 
 
 
@@ -97,14 +105,14 @@
     </div>
 
     <!-- Eye Color Selector -->
-    <div class="eye-colors w-100">
+    {{-- <div class="eye-colors w-100">
         <select id="search_by_eye_color" class="eyeColorSelect">
             <option value="">Eye Colour</option>
             @foreach($eyeColors as $item)
             <option @if(!empty(request()->get("eye_color_id")) && request()->get("eye_color_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
-    </div>
+    </div> --}}
 
     <!-- Hair Color Selector -->
     <div class="hair-colors w-100">
@@ -117,33 +125,33 @@
     </div>
 
     <!-- Service Type Selector -->
-    <div class="service-types w-100">
+    {{-- <div class="service-types w-100">
         <select id="search_by_service_type" class="serviceTypeSelect">
             <option value="">Service Type</option>
             @foreach($serviceTypes as $item)
             <option @if(!empty(request()->get("service_type_id")) && request()->get("service_type_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
-    </div>
+    </div> --}}
 
     <!-- Servicing Selector -->
-    <div class="servicings w-100">
+    {{-- <div class="servicings w-100">
         <select id="search_by_servicing" class="servicingSelect">
             <option value="">Servicing</option>
             @foreach($servicings as $item)
             <option @if(!empty(request()->get("servicing_id")) && request()->get("servicing_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
-    </div>
+    </div> --}}
 
     <!-- Heights Selector -->
-    <div class="heights w-100">
+    {{-- <div class="heights w-100">
         <select id="search_by_heights" class="heightsSelect">
             <option value="">Height</option>
             @foreach($heights as $item)
             <option @if(!empty(request()->get("heights_id")) && request()->get("heights_id") == $item->id) selected @endif value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
-    </div>
+    </div> --}}
     {{-- </form> --}}
 </div>

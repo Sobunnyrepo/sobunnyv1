@@ -147,6 +147,7 @@
                         <div class="left-part mb-4">
                             <div class="product-name-price">
                                 <div class="product-name">{{ $listing->title }}</div>
+
                                 <div class="right-part text-right">
                                     {{-- <div class="price text-end"><span>{{ float_amount_with_currency_symbol($listing->price) }}</span>
                                         @if($listing->negotiable === 1)
@@ -156,7 +157,10 @@
                                 </div>
                             </div>
                             <div class="date-location">
-                                <span>{{ __('Posted on') }}  <span class="posted">{{ \Carbon\Carbon::parse($listing->created_at)->format('j F Y') }}</span></span>
+                                {{-- <x-listings.listing-user-badges :listing="$listing" :userTotalListings="$user_total_listings"/> --}}
+                                <x-badge.user-verified-badge :listing="$listing"/>
+
+                                {{-- <span>{{ __('Posted on') }}  <span class="posted">{{ \Carbon\Carbon::parse($listing->created_at)->format('j F Y') }}</span></span> --}}
                                 <span class="vartical-devider"></span>
                                 <span>{{ get_static_option('listing_location_title') ?? __('Location') }}
                                      <span class="posted"> {{ userListingLocation($listing) }} </span>
