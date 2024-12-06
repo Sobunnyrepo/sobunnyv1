@@ -44,7 +44,7 @@
                                                         </div>
                                                     </a>
                                                     <div class="text-part">
-                                                        <div class="date">{{ optional($blog->created_at)->diffForHumans() }}</div>
+                                                        {{-- <div class="date">{{ optional($blog->created_at)->diffForHumans() }}</div> --}}
                                                         <div class="title">
                                                             <a href="{{ route('frontend.blog.single', $blog->slug ?? 'x') }}">
                                                                 {!! strlen($blog->title) > 55 ? substr($blog->title, 0, 55) . '...' : $blog->title !!}

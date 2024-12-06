@@ -70,12 +70,12 @@
                             <a href="{{ route('frontend.blog.single', $blog_post->slug) }}"> {{ $blog_post->title }} </a>
                         </h3>
                         <div class="writter-part">
-                            <div class="text">
+                            {{-- <div class="text">
                                 <div class="date">
                                     <i class="las la-clock"></i>
                                     {{ optional($blog_post->created_at)->diffForHumans() }}
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <p class="pera" id="description">
@@ -139,7 +139,7 @@
                                         <div class="divider"></div>
                                         <div class="writter-part">
                                             <div class="text">
-                                                <div class="date"><i class="las la-clock"></i>{{ optional($related->created_at)->diffForHumans() }}</div>
+                                                {{-- <div class="date"><i class="las la-clock"></i>{{ optional($related->created_at)->diffForHumans() }}</div> --}}
                                                 <div class="name">
                                                     <a href="{{ route('frontend.blog.category',optional($related->category)->slug) }}">
                                                      <i class="las la-tags"></i>{{ optional($related->category)->name }}

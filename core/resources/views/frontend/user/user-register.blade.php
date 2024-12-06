@@ -86,17 +86,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 col-md-12">
-                                <label class="infoTitle">{{ __('Select Role') }}</label>
-                                <div class="input-form">
-                                    <select name="role" id="role" required>
-                                        {{-- <option value="">{{ __('Select Role') }}</option> --}}
-                                        <option value="client">{{ __('Client') }}</option>
-                                        <option value="provider">{{ __('Provider') }}</option>
-                                    </select>
-                                </div>
-                            </div>
-
+  
 
                             <div class="col-lg-6 col-md-12">
                                 <label class="infoTitle">{{ __('Password') }}</label>
@@ -116,6 +106,16 @@
                                     <div class="icon toggle-password">
                                        <i class="las la-eye"></i>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="infoTitle">{{ __('Select Role') }}</label>
+                                <div class="input-form">
+                                    <select name="role" id="role" required>
+                                        {{-- <option value="">{{ __('Select Role') }}</option> --}}
+                                        <option value="client">{{ __('Client') }}</option>
+                                        <option value="provider">{{ __('Provider') }}</option>
+                                    </select>
                                 </div>
                             </div>
 

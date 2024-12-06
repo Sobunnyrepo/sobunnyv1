@@ -27,30 +27,6 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        $user = "sobunnyus@gmail.com";
-        $password = "Sobunny2024.";
-
-
-
-        // $response = Http::withHeaders([
-        //     'x-api-key' => 'ZCRRBS4-2B64SGZ-M32E1K9-51K02FD',
-        //     'Content-Type' => 'application/json',
-        // ])->post('https://api.nowpayments.io/v1/payment', [
-        //     'price_amount' => 20,
-        //     'price_currency' => 'usd', // Monto expresado en USD
-        //     'pay_currency' => 'btc', // Moneda de pago: Bitcoin
-        //     'ipn_callback_url' => 'https://sobunny.com/print-request',
-        //     'order_id' => "usuario_{1}",
-        //     'order_description' => "Pago con Bitcoin del usuario con ID {1}",
-        // ]);
-        
-        // // Devuelve el enlace de pago
-        // if ($response->successful()) {
-        //     dd($response->json());
-
-        //     return response()->json(['urlPago' => $response['invoice_url']]);
-        // }
-
         try {
             $client = new Client();
             $response = $client->post('https://api.nowpayments.io/v1/payment', [
@@ -59,7 +35,7 @@ class TestCommand extends Command
                     'Content-Type' => 'application/json',
                 ],
                 'json' => [
-                    'price_amount' => 3999.5,
+                    'price_amount' => 30,
                     'price_currency' => 'usd',
                     'pay_currency' => 'btc',
                     'ipn_callback_url' => 'https://3525-2806-2f0-49c1-fd7f-83c-8d21-d8b3-f76b.ngrok-free.app/print-request', // Cambia esta URL si es necesario

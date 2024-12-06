@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         @endif
-                        <span  class="sendTime">{{ $message->created_at->diffForHumans() }}</span>
+                        {{-- <span  class="sendTime">{{ $message->created_at->diffForHumans() }}</span> --}}
                 </div>
             </div>
         </div>
