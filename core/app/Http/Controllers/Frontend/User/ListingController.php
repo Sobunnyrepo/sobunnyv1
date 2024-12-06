@@ -263,7 +263,7 @@ class ListingController extends Controller
 
             if ($request->input('more_cities_id')) {
                 $listing->second_city_id = $request->input('more_cities_id')[0];
-                $listing->third_city_id = $request->input('more_cities_id')[1];
+                $listing->third_city_id = $request->input('more_cities_id')[1]??null;
             }
             $tags_name = '';
             if (!empty($request->tags)) {
@@ -517,7 +517,7 @@ class ListingController extends Controller
 
             if ($request->input('more_cities_id')) {
                 $listing->second_city_id = $request->input('more_cities_id')[0];
-                $listing->third_city_id = $request->input('more_cities_id')[1];
+                $listing->third_city_id = $request->input('more_cities_id')[1]??null;
             }
 
 
@@ -563,6 +563,7 @@ class ListingController extends Controller
                 //
             }
 
+            return redirect()->route('user.all.listing')->with(toastr_success(__('Listing Updated Success')));
             return back()->with(toastr_success(__('Listing Updated Success')));
         }
 
