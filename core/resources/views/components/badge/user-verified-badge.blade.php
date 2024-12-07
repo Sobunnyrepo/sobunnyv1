@@ -21,3 +21,15 @@
     @endif
     <x-badge.membership-badge :user="$user"/>
 @endif
+
+
+    <style>
+        .varified {
+            padding: 1px 5px;
+          border-radius: 2px;
+          font-size:10px;
+          font-weight: 500;
+          color: #fff;
+          background: #22C55E;
+        }
+    </style>
