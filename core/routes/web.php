@@ -22,6 +22,11 @@ use \App\Http\Controllers\Frontend\FrontendListingController;
 use \App\Http\Controllers\Frontend\FrontendUserProfileController;
 
 
+
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});
+
 Route::resource('nowpayments-webhook', NowpaymentsWebhookController::class);
 
 require_once __DIR__ . '/admin.php';
