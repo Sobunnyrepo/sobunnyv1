@@ -388,8 +388,8 @@ function get_language_by_slug($slug)
 }
 function site_currency_symbol($text = false)
 {
-    $all_currency = XgPaymentGateway::script_currency_list();
-
+    // $all_currency = XgPaymentGateway::script_currency_list();
+    $all_currency =[];
     $symbol = '$';
     $global_currency = get_static_option('site_global_currency');
     foreach ($all_currency as $currency => $sym) {

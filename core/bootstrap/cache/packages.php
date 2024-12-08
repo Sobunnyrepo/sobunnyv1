@@ -1,13 +1,13 @@
 <?php return array (
-  'anandsiddharth/laravel-paytm-wallet' => 
+  'barryvdh/laravel-debugbar' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Anand\\LaravelPaytmWallet\\PaytmWalletServiceProvider',
-    ),
     'aliases' => 
     array (
-      'PaytmWallet' => 'Anand\\LaravelPaytmWallet\\Facades\\PaytmWallet',
+      'Debugbar' => 'Barryvdh\\Debugbar\\Facades\\Debugbar',
+    ),
+    'providers' => 
+    array (
+      0 => 'Barryvdh\\Debugbar\\ServiceProvider',
     ),
   ),
   'brian2694/laravel-toastr' => 
@@ -30,17 +30,6 @@
     'aliases' => 
     array (
       'Image' => 'Intervention\\Image\\Facades\\Image',
-    ),
-  ),
-  'jomweb/billplz-laravel' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Billplz\\Laravel\\BillplzServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Billplz' => 'Billplz\\Laravel\\Billplz',
     ),
   ),
   'laravel/sail' => 
@@ -93,17 +82,6 @@
       'Purifier' => 'Mews\\Purifier\\Facades\\Purifier',
     ),
   ),
-  'mollie/laravel-mollie' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Mollie\\Laravel\\MollieServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Mollie' => 'Mollie\\Laravel\\Facades\\Mollie',
-    ),
-  ),
   'nesbot/carbon' => 
   array (
     'providers' => 
@@ -143,13 +121,6 @@
       0 => 'Propaganistas\\LaravelPhone\\PhoneServiceProvider',
     ),
   ),
-  'sharifur/payfast' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Billow\\PayfastServiceProvider',
-    ),
-  ),
   'spatie/laravel-ignition' => 
   array (
     'providers' => 
@@ -175,17 +146,6 @@
       0 => 'Spatie\\Sitemap\\SitemapServiceProvider',
     ),
   ),
-  'srmklive/paypal' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Srmklive\\PayPal\\Providers\\PayPalServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'PayPal' => 'Srmklive\\PayPal\\Facades\\PayPal',
-    ),
-  ),
   'stevebauman/location' => 
   array (
     'providers' => 
@@ -197,40 +157,11 @@
       'Location' => 'Stevebauman\\Location\\Facades\\Location',
     ),
   ),
-  'tzsk/payu' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Tzsk\\Payu\\PayuServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Payu' => 'Tzsk\\Payu\\Facades\\Payu',
-    ),
-  ),
-  'unicodeveloper/laravel-paystack' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Unicodeveloper\\Paystack\\PaystackServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Paystack' => 'Unicodeveloper\\Paystack\\Facades\\Paystack',
-    ),
-  ),
   'xgenious/installer' => 
   array (
     'providers' => 
     array (
       0 => 'Xgenious\\Installer\\InstallerServiceProvider',
-    ),
-  ),
-  'xgenious/paymentgateway' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Xgenious\\Paymentgateway\\Providers\\PaymentgatewayServiceProvider',
     ),
   ),
   'xgenious/xgapiclient' => 

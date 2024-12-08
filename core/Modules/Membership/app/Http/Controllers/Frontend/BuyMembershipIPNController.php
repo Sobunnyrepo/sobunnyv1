@@ -7,15 +7,11 @@ use App\Http\Controllers\Controller;
 use App\Mail\BasicMail;
 use App\Models\Backend\AdminNotification;
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Modules\Membership\app\Models\MembershipHistory;
 use Modules\Membership\app\Models\UserMembership;
-use Xgenious\Paymentgateway\Facades\XgPaymentGateway;
 
 class BuyMembershipIPNController extends Controller
 {

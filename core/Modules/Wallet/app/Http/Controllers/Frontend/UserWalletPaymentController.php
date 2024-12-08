@@ -6,17 +6,12 @@ use App\Helpers\FlashMsg;
 use App\Helpers\PaymentGatewayCredential;
 use App\Http\Controllers\Controller;
 use App\Mail\BasicMail;
-use App\Models\Backend\Admin;
 use App\Models\Backend\AdminNotification;
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Modules\Wallet\app\Models\Wallet;
 use Modules\Wallet\app\Models\WalletHistory;
-use Xgenious\Paymentgateway\Facades\XgPaymentGateway;
 
 class UserWalletPaymentController extends Controller
 {

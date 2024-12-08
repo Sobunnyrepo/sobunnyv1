@@ -15,9 +15,9 @@
                         <div class="form__input__single">
                             <label class="form__input__single__label" for="site_canonical_url_type" class="form__input__single__label">{{__('Site Global Currency')}}</label>
                             <select class="form__control radius-5" name="site_global_currency" id="site_global_currency">
-                                @foreach(Xgenious\Paymentgateway\Facades\XgPaymentGateway::script_currency_list() as $cur => $symbol)
+                                {{-- @foreach(Xgenious\Paymentgateway\Facades\XgPaymentGateway::script_currency_list() as $cur => $symbol)
                                     <option value="{{$cur}}" @if(get_static_option('site_global_currency') == $cur) selected @endif >{{$cur.' ( '.$symbol.' )'}} </option>
-                                @endforeach
+                                @endforeach --}}
                             </select>
                         </div>
 

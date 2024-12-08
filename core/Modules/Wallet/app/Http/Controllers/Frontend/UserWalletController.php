@@ -6,15 +6,12 @@ use App\Helpers\PaymentGatewayCredential;
 use App\Http\Controllers\Controller;
 use App\Mail\BasicMail;
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Intervention\Image\Facades\Image;
 use Modules\Wallet\app\Models\Wallet;
 use Modules\Wallet\app\Models\WalletHistory;
-use Xgenious\Paymentgateway\Facades\XgPaymentGateway;
 
 class UserWalletController extends Controller
 {
