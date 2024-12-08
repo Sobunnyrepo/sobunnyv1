@@ -2,7 +2,10 @@
 <div class="pricingCard mt-4">
     <div class="row g-3">
         @php
-            $memberships = \Modules\Membership\app\Models\Membership::where('status',1)->take(3)->get();
+            $memberships = \Modules\Membership\app\Models\Membership::where('status',1)->take(3)
+            ->where('membership_user_type', auth()->guard('web')->user()->role)
+            ->orWhere('id', 1)
+            ->get();
             $user_current_membership = \Modules\Membership\app\Models\UserMembership::where('user_id', auth()->guard('web')->user()->id)
                 ->whereDate('expire_date', '>', now())
                 ->latest()->first();

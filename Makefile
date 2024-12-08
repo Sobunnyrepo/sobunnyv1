@@ -6,7 +6,7 @@ server-enter:
 enter:
 	@docker exec -it php-sobunny /bin/bash
 clear:
-	@docker exec -it php-sobunny /bin/bash -c "cd core && php artisan config:cache && php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan route:cache && chown -R www-data:www-data /var/www/html/core/bootstrap/cache && chown -R www-data:www-data /var/www/html/core/storage"
+	@docker exec -it php-sobunny /bin/bash -c "cd core && php artisan config:cache && php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan route:cache && chown -R www-data:www-data /var/www/html/core/bootstrap/cache && chown -R www-data:www-data /var/www/html/core/storage && php artisan route:cache"
 
 export-db:
 	@read -p "Nombre de la base de datos: " DB_NAME; \
@@ -38,7 +38,9 @@ pull-report-virus:
 iqnews-server:
 	@ssh root@$(SERVER_IP)
 full-clear:
-	@docker exec -it php-sobunny /bin/bash -c "php artisan config:cache && php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan route:cache && php artisan view:clear && php artisan view:cache"
+	@docker exec -it php-sobunny /bin/bash -c "cd core && php artisan config:cache && php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan route:cache && php artisan view:clear && php artisan view:cache"
 
 push-server-database:
 	@scp sobunny.sql root@$(SERVER_IP):/home/sobunnyv1/
+ngrok:
+	@ngrok http --host-header=rewrite http://localhost:8088;

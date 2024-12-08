@@ -29,16 +29,17 @@ class TestCommand extends Command
     {
         try {
             $client = new Client();
-            $response = $client->post('https://api.nowpayments.io/v1/payment', [
+            dump(config('app.nowpayment_api_key'));
+            $response = $client->post('https://api-sandbox.nowpayments.io/v1/payment', [
                 'headers' => [
-                    'x-api-key' => 'ZCRRBS4-2B64SGZ-M32E1K9-51K02FD', // Asegúrate de reemplazar con tu clave real
+                    'x-api-key' => config('app.nowpayment_api_key'),
                     'Content-Type' => 'application/json',
                 ],
                 'json' => [
                     'price_amount' => 30,
                     'price_currency' => 'usd',
                     'pay_currency' => 'btc',
-                    'ipn_callback_url' => 'https://3525-2806-2f0-49c1-fd7f-83c-8d21-d8b3-f76b.ngrok-free.app/print-request', // Cambia esta URL si es necesario
+                    'ipn_callback_url' => 'https://0fd5-2806-2f0-49c1-fd7f-bd03-9bc9-f80c-d0f8.ngrok-free.app/nowpayments-webhook', // Cambia esta URL si es necesario
                     'order_id' => 'RGDBP-21314',
                     'order_description' => 'Apple Macbook Pro 2019 x 1',
                 ],

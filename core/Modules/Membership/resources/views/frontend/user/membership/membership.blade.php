@@ -39,6 +39,9 @@
 
                                 @include('membership::frontend.user.membership.user-dashboard-membership-plans')
 
+                                {{-- <pre>
+                                    {{ print_r($user_membership->toArray()) }}
+                                </pre> --}}
                                 @if(!empty($user_membership))
                                   <!--Membership section start -->
                                     <div class="memberShipCart mt-3">
@@ -166,7 +169,6 @@
                                 <p><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
                                 {{-- <img id="codigoQRImg" alt="Scan this QR code to pay" /> --}}
                                 <canvas id="codigoQR"></canvas>
-
                             </div>
 
 

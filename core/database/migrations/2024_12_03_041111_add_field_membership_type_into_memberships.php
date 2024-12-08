@@ -11,7 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::table('memberships', function (Blueprint $table) {
+            $table->string('membership_user_type')->nullable()->default('provider');
+        });
     }
 
     /**
@@ -19,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('memberships', function (Blueprint $table) {
+            $table->dropColumn('membership_user_type');
+        });
     }
 };

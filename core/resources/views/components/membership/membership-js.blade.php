@@ -14,6 +14,9 @@
 
                 // Buy now membership plan
                 $(document).on('click', '.choose_membership_plan', function(e){
+                    let planId = $(this).data('id');
+                    $('.membershipId').val(planId);
+
                     // Change the class ID name
                     $('#paymentGatewayModal').find('#membership_id_stop').attr('id', 'membership_id');
 

@@ -7,14 +7,22 @@
             $('#buyBitcoin').on('click', function() {
                 // alert('You have purchased Bitcoin');
 
+                Swal.fire(
+                    'Loading',
+                    'Generating payment address...',
+                    'info'
+                )
+                Swal.showLoading();
+
                 $.ajax({
                     url: '/user/payments',
                     method: 'POST',
-                    //                    data: JSON.stringify(data),
+                    data: {
+                        membership_id: $('.membershipId').val(),
+                    },
                     success: function(response) {
                         const data = response.success
-                        console.log(response.success)
-
+                        Swal.close();
                         $('.red-global-close-btn').trigger('click');
                         $('#paymentModal').modal('show');
 
@@ -40,8 +48,13 @@
 
                     },
                     error: function(error) {
-                        console.error('Error al crear el pago:', error);
-                        alert('No se pudo procesar el pago. Inténtalo de nuevo.');
+                        setTimeout(() => {
+                            Swal.fire(
+                            'Error',
+                            'Could not generate payment address. Please try again.',
+                            'error'
+                        )                            
+                        }, 500);
                     },
                 });
             });

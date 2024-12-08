@@ -15,26 +15,18 @@ use App\Http\Controllers\Frontend\UserReviewController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Console\NowpaymentsWebhookController;
 use App\Http\Controllers\Frontend\CustomSearchListingController;
 use \App\Http\Controllers\Frontend\User\MediaUploadController;
 use \App\Http\Controllers\Frontend\FrontendListingController;
 use \App\Http\Controllers\Frontend\FrontendUserProfileController;
 
 
-Route::post('/print-request', function (\Illuminate\Http\Request $request) {
-    info('GET print-request');
-    info($request->all());
-    return response()->json($request->all());
-});
-Route::get('/print-request', function (\Illuminate\Http\Request $request) {
-    info('POST print-request');
-    info($request->all());
-    return 2;
-    return response()->json($request->all());
-});
+Route::resource('nowpayments-webhook', NowpaymentsWebhookController::class);
 
 require_once __DIR__ . '/admin.php';
 require_once __DIR__ . '/user.php';
+
 
 Route::resource('custom-search-listings', CustomSearchListingController::class);
 Route::group(['middleware' => ['globalVariable','setlang']], function () {

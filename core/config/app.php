@@ -125,6 +125,9 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
+    'nowpayment_api_key' => env('NOWPAYMENT_API_KEY', 'your-now'),
+    'nowpayment_ipn_callback_url' => env('NOWPAYMENT_IPN_CALLBACK_URL', 'https://sobunny.com/nowpayments-webhook'),
+    'nowpayment_api_url' => env('NOWPAYMENT_API_URL', 'https://api.nowpayments.io/v1/payment'),
 
     /*
     |--------------------------------------------------------------------------
