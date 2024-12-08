@@ -162,9 +162,9 @@
 
                                 {{-- <span>{{ __('Posted on') }}  <span class="posted">{{ \Carbon\Carbon::parse($listing->created_at)->format('j F Y') }}</span></span> --}}
                                 <span class="vartical-devider"></span>
-                                <span>{{ get_static_option('listing_location_title') ?? __('Location') }}
+                                {{-- <span>{{ get_static_option('listing_location_title') ?? __('Location') }}
                                      <span class="posted"> {{ userListingLocation($listing) }} </span>
-                                </span>
+                                </span> --}}
                             </div>
                         </div>
 

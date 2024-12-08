@@ -408,7 +408,6 @@
                                                    `+place.title+`
                                               </a>
                                            </h4>
-                                           <span class="featurePricing d-flex justify-content-between align-items-center">
                                            <span class="date">`+place.listing_published_at+`</span>
                                           </span>
                                     </div>
