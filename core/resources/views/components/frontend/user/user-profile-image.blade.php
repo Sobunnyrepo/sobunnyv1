@@ -7,11 +7,18 @@
         @endif
   </button>
 @else
-    <div class="btn-wrapper">
+    {{-- <div class="btn-wrapper">
         <a href="{{ route('user.login') }}"  class="cmn-btn sign-in">
             {{ __('Sign In') }}
         </a>
-    </div>
+    </div> --}}
+    <li class="single">
+        <div class="btn-wrapper">
+            <a href="{{ route('user.login') }}" class="cmn-btn1 popup-modal">
+                <i class="las la-user-circle"></i><span class="text">{{ __('Sign In') }}</span>
+            </a>
+        </div>
+    </li>
 @endif
 
 

@@ -131,7 +131,7 @@
                     }, function() {});
                 }
             }
-            getVisitorLocation();
+            //getVisitorLocation();
         </script>
 
 

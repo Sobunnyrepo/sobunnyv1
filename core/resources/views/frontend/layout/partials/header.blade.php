@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="{{ asset('assets/common/css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/jquery.ihavecookies.css')}}">
     <link rel="stylesheet" href="{{asset('assets/backend/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/css/main.css')}}">
+
     @if(get_user_lang_direction() == 'rtl')
         <link rel="stylesheet" href="{{asset('assets/common/css/rtl.css')}}">
     @endif

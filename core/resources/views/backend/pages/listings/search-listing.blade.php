@@ -8,6 +8,7 @@
         </th>
     @endcan
     <th>{{__('ID')}}</th>
+    <th>{{__('Birthday')}}</th>
     <th>{{__('Image')}}</th>
     <th>{{__('Title')}}</th>
     <th>{{__('Category')}}</th>
@@ -36,6 +37,9 @@
                 </td>
             @endcan
             <td>{{$data->id}}</td>
+            <td>{{$data->user->birthdate}}</td>
+
+            
             <td> {!! render_image_markup_by_attachment_id($data->image,'','thumb') !!}</td>
             <td>{{$data->title}}</td>
             <td>{{optional($data->category)->name}}</td>

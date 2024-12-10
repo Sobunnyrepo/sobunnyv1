@@ -12,7 +12,7 @@
          @endphp
         @foreach($memberships as $membership)
            <div class="col-lg-4 col-sm-6">
-                <div style="z-index:-1" class="singlePrice @if(!empty($user_current_membership) && $user_current_membership->membership_id === $membership->id) active @endif">
+                <div class="singlePrice @if(!empty($user_current_membership) && $user_current_membership->membership_id === $membership->id) active @endif">
                     <h4 class="priceTittle">{{ $membership->title }}</h4>
 
                     <span class="price">{{ float_amount_with_currency_symbol($membership->price) }}

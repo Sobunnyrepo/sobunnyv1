@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="{{ asset('assets/common/css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/backend/css/telInput-plugin.css') }}">
     <link rel="stylesheet" href="{{asset('assets/backend/css/custom-style.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/backend/css/admin.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/css/main.css')}}">
 
 
     @yield('style')
