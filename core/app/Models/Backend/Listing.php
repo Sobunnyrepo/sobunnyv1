@@ -104,7 +104,14 @@ class Listing extends Model
     {
         return $this->belongsTo(City::class, 'city_id');
     }
-
+    public function secondaryCity()
+    {
+        return $this->belongsTo(City::class, 'second_city_id');
+    }
+    public function tertiaryCity()
+    {
+        return $this->belongsTo(City::class, 'third_city_id');
+    }
     public function user(){
         return $this->belongsTo(User::class,'user_id','id');
     }
