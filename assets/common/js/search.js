@@ -13,7 +13,7 @@ $(document).ready(function () {
     let serviceType = $("#search_by_service_type").val();
     let servicing = $("#search_by_servicing").val();
     let height = $("#search_by_heights").val();
-    let cityId = $("#city_id").val();
+    let cityId = $("#search_by_city_id").val();
     let form = $("#search_listings_form");
 
     if (!gender) {

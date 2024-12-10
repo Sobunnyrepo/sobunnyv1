@@ -122,15 +122,13 @@ class AccountSettingController extends Controller
 
             $request->validate([
                 'identification_type' => 'required|max:191',
-                'country_id' => 'required',
-                'state_id' => 'required',
-                'city_id' => 'required',
-                'zip_code' => 'required',
-                'address' => 'required',
+                'country' => 'required',
+                'state' => 'required',
+                'city' => 'required',
                 'identification_number' => 'required'
             ]);
 
-                if ($request->file('front_document') || $request->file('back_document')){
+                if ($request->file('front_document') || $request->file('back_document')|| $request->file('selfie')){
                     $request->validate([
                         'front_document' => 'required|file|mimes:jpg,png,jpeg,webp,pdf|max:10240',
                         'back_document' => 'required|file|mimes:jpg,png,jpeg,webp,pdf|max:10240',
@@ -146,6 +144,11 @@ class AccountSettingController extends Controller
                     $back_imageName = time().'-'.uniqid().'.'.$back_document->getClientOriginalExtension();
                     $back_document->move('assets/uploads/verification',$back_imageName);
                 }
+                $selfieName = null;
+                if($selfie = $request->file('selfie')){
+                    $selfieName = time().'-'.uniqid().'.'.$selfie->getClientOriginalExtension();
+                    $selfie->move('assets/uploads/verification',$back_imageName);
+                }
 
                 $user = Auth::guard('web')->user()->id;
                 $old_document = IdentityVerification::where('user_id', $user)->first();
@@ -157,12 +160,13 @@ class AccountSettingController extends Controller
                     'front_document' => $front_imageName,
                     'back_document' => $back_imageName,
                     'identification_type' => $request->identification_type,
-                    'country_id' => $request->country_id,
-                    'state_id' => $request->state_id,
-                    'city_id' => $request->city_id,
-                    'zip_code' => $request->zip_code,
-                    'address' => $request->address,
+                    'country' => $request->country,
+                    'state' => $request->state,
+                    'city' => $request->city,
+                    // 'zip_code' => $request->zip_code,
+                    // 'address' => $request->address,
                     'identification_number' => $request->identification_number,
+                    'selfie' => $selfieName,
                 ]);
             }else{
                 IdentityVerification::where('user_id', $user)->update([
@@ -170,13 +174,14 @@ class AccountSettingController extends Controller
                     'front_document' => $front_imageName ?? $old_document->front_document,
                     'back_document' => $back_imageName ?? $old_document->back_document,
                     'identification_type' => $request->identification_type,
-                    'country_id' => $request->country_id,
-                    'state_id' => $request->state_id,
-                    'city_id' => $request->city_id,
-                    'zip_code' => $request->zip_code,
-                    'address' => $request->address,
+                    'country' => $request->country,
+                    'state' => $request->state,
+                    'city' => $request->city,
+                    // 'zip_code' => $request->zip_code,
+                    // 'address' => $request->address,
                     'identification_number' => $request->identification_number,
                     'status' => 0,
+                    'selfie' => $selfieName,
                 ]);
             }
 

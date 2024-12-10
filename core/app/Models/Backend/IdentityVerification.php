@@ -19,13 +19,14 @@ class IdentityVerification extends Model
         'identification_number',
         'front_document',
         'back_document',
-        'country_id',
-        'state_id',
-        'city_id',
-        'zip_code',
-        'address',
+        'country',
+        'state',
+        'city',
+        // 'zip_code',
+        // 'address',
         'verify_by',
         'status',
+        'selfie',
     ];
 
     protected $casts = ['status'=>'integer','is_read'=>'integer'];

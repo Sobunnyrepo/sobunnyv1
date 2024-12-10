@@ -332,7 +332,7 @@
                                 <div class="col-12">
                                     <div class="single-flex-input">
 
-                                        <div class="single-input">
+                                        {{-- <div class="single-input">
                                             <label class="label-title">{{ __('Select Your Country') }}  <span class="text-danger">*</span></label>
                                             <select name="country_id" id="country_id" class="select2_activation">
                                                 <option value="">{{ __('Select Country') }}</option>
@@ -341,31 +341,42 @@
                                                 @endforeach
                                             </select>
                                             <span class="country_info"></span>
+                                        </div> --}}
+
+                                        <div class="single-input">
+                                            <label class="label-title">{{ __('Select Your Country') }}  <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" name="country">
+                                    
+                                            <span class="country_info"></span>
                                         </div>
 
                                         <div class="single-input">
                                             <label class="label-title">{{ __('Select Your State') }}  <span class="text-danger">*</span></label>
-                                            <select name="state_id" id="state_id" class="select2_activation">
+                                            <input class="form-control" type="text" name="state">
+
+                                            {{-- <select name="state_id" id="state_id" class="select2_activation">
                                                 <option value="">{{ __('Select State') }}</option>
                                                 @foreach($all_states = \Modules\CountryManage\app\Models\State::all_states() as $state)
                                                     <option value="{{ $state->id }}" @if(!empty($user_verify_info) && $state->id == $user_verify_info->state_id) selected @endif>{{ $state->state }}</option>
                                                 @endforeach
-                                            </select>
+                                            </select> --}}
                                             <span class="country_info"></span>
                                         </div>
                                         <div class="single-input">
                                             <label class="label-title">{{ __('Select Your City') }}  <span class="text-danger">*</span></label>
-                                            <select name="city_id" id="city_id" class="select2_activation">
+                                            <input class="form-control" type="text" name="city">
+
+                                            {{-- <select name="city_id" id="city_id" class="select2_activation">
                                                 <option value="">{{ __('Select City') }}</option>
                                                 @foreach($all_cities = \Modules\CountryManage\app\Models\City::all_cities() as $city)
                                                     <option value="{{ $city->id }}" @if(!empty($user_verify_info) && $city->id == $user_verify_info->city_id) selected @endif>{{ $city->city }}</option>
                                                 @endforeach
-                                            </select>
+                                            </select> --}}
                                             <span class="country_info"></span>
                                         </div>
                                     </div>
                                </div>
-                                <div class="col-12 mt-3">
+                                {{-- <div class="col-12 mt-3">
                                     <div class="input-form">
                                         <label class="d-block" for="national-id-number">{{ __('Zip Code') }} <span class="text-danger">*</span> </label>
                                         <input class="form-control w-100" type="number" name="zip_code" id="zip_code" value="{{  $user_verify_info?->zip_code }}">
@@ -376,7 +387,7 @@
                                         <label class="d-block" for="address">{{ __('Address') }} <span class="text-danger">*</span> </label>
                                         <input class="form-control w-100" type="text" name="address" id="address" value="{{  $user_verify_info?->address }}">
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-12 mt-3">
                                     <div class="input-form">
                                         <label class="d-block" for="identification_number">{{ __('National NID/Passport/Driving License Number') }} <span class="text-danger">*</span> </label>
@@ -412,6 +423,40 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
+
+
+                                <div class="col-6 mb-3 mt-3">
+
+                                    <img src="{{ asset('assets/backend/img/selfie.png') }}" alt="">
+                                </div>
+
+
+
+
+
+                                <div class="col-6 mb-3 mt-3">
+                                    <div class="input-form">
+                                        <div class="id-back">
+                                            <label class="d-block file-name" for="id-back">{{__('Upload Selfie')}} <span class="text-danger">*</span> </label>
+                                            <label for="id-back" class="id-upload-btn">
+                                                <i class="las la-arrow-alt-circle-up fs-5"></i>{{__('Upload Selfie')}}
+                                            </label>
+                                            <input class="w-100 file-name" name="selfie" id="id-back" type="file" value="{{$user_verify_info->back_document ?? ''}}">
+                                        </div>
+                                        <div class="file-preview mt-2">
+                                            <img id="back-preview" src="#" alt="Selfie Preview" style="display:none; max-width:100%; max-height:200px;" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
 
                             </div>
                             <div class="modal-footer">

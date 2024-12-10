@@ -20,12 +20,25 @@
         </div> --}}
 
 
-        <select name="city_id" id="city_id" class="select2_activation">
+        <div class="genders w-100">
+        <select id="search_by_city_id" class="select2_activation">
             <option value="">{{ __('Select Location') }}</option>
             @foreach ($cities as $city)
                 <option value="{{ $city->id }}">{{ $city->city }}</option>
             @endforeach
         </select>
+        </div>
+
+
+
+        {{-- <div class="genders w-100">
+            <select id="city_id" class="genderSelect">
+                <option value="">Select Location</option>
+                @foreach($cities as $city)
+                <option @if(!empty(request()->get("city_id")) && request()->get("city_id") == $city->id) selected @endif value="{{ $city->id }}">{{ $city->city }}</option>
+                @endforeach
+            </select>
+        </div> --}}
 
     <!-- Gender Selector -->
     <div class="genders w-100">
