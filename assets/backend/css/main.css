@@ -3,3 +3,7 @@
     cursor: pointer !important;
 
 }
+.modal-backdrop.show
+{
+    opacity: .9 !important;
+}

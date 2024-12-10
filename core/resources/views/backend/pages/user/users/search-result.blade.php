@@ -3,6 +3,7 @@
     <tr>
         <th>{{__('ID')}}</th>
         <th>{{__('Name')}}</th>
+        <th>{{__('BirthDay')}}</th>
         <th>{{__('Email')}}</th>
         <th>{{__('Phone')}}</th>
         <th>{{__('Account Status')}}</th>
@@ -16,6 +17,7 @@
             <tr>
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->first_name.' '.$user->last_name }}</td>
+                <td>{{$user->birthdate}}</td>
                 <td>
                     {{ $user->email }}
                     <strong>
