@@ -32,7 +32,7 @@
                                         @php
                                              $page_url = \App\Models\Backend\Page::find(get_static_option('membership_plan_page'));
                                         @endphp
-                                        <a href="@if($page_url) {{ url('/' . $page_url->slug) }}@endif">{{ __('See All Plans') }} <i class="fa-solid fa-angle-right"></i> </a>
+                                        {{-- <a href="@if($page_url) {{ url('/' . $page_url->slug) }}@endif">{{ __('See All Plans') }} <i class="fa-solid fa-angle-right"></i> </a> --}}
 
                                     </div>
                                 </div>

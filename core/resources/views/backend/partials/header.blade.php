@@ -36,6 +36,9 @@
     <link rel="stylesheet" href="{{ asset('assets/common/css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/backend/css/telInput-plugin.css') }}">
     <link rel="stylesheet" href="{{asset('assets/backend/css/custom-style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/backend/css/admin.css')}}">
+
+
     @yield('style')
     @if(get_static_option('site_admin_dark_mode') == 'on')
         <link rel="stylesheet" href="{{asset('assets/backend/css/dashboard_dark.css')}}">
