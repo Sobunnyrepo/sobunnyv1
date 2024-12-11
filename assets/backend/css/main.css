@@ -123,3 +123,6 @@
   {
     margin: auto !important;
   }
+  .membership-badge{
+    max-width: 65px;
+  }
