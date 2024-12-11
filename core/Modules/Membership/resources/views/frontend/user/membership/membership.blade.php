@@ -164,11 +164,11 @@
                         <div class="modal-body" style="color:white">
 
                             <div>
-                                <h3>Make your payment in Bitcoin</h3>
-                                <p><strong>Bitcoin Address:</strong> <span id="direccionBitcoin"></span></p>
-                                <p><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
+                                <h3 style="color:white">Make your payment in Bitcoin</h3>
+                                <p style="color:white"><strong>Bitcoin Address:</strong> <span id="direccionBitcoin"></span></p>
+                                <p style="color:white"><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
                                 {{-- <img id="codigoQRImg" alt="Scan this QR code to pay" /> --}}
-                                <canvas id="codigoQR"></canvas>
+                                <canvas style="margin: auto" id="codigoQR"></canvas>
                             </div>
 
 
