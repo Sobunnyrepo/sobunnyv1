@@ -126,3 +126,8 @@
   .membership-badge,.varified{
     max-width: 70px;
   }
+
+  .btn-wrapper .cmn-btn-outline1
+  {
+    position: static !important;
+  }
