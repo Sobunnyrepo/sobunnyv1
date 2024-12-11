@@ -163,7 +163,7 @@
                         </div>
                         <div class="modal-body" style="color:white">
 
-                            <div>
+                            <div style="display: flex; flex-direction:column; margin:auto">
                                 <h3 style="color:white">Make your payment in Bitcoin</h3>
                                 <p style="color:white"><strong>Bitcoin Address:</strong> <span id="direccionBitcoin"></span></p>
                                 <p style="color:white"><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
