@@ -11,7 +11,7 @@
                 <div class="card-body-top">
                     <h4> <a href="{{ route('frontend.listing.details', $listing->slug) }}" class="featureTittle head4 twoLine">{{ $listing->title }}</a> </h4>
                 </div>
-                <x-badge.membership-badge :listing="$listing"/>
+                <x-badge.user-verified-badge :listing="$listing"/>
 
                 <x-listings.listing-location :listing="$listing"/>
 
