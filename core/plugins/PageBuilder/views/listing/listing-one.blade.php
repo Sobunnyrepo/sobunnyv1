@@ -1,3 +1,5 @@
+@include('frontend.layout.partials.terms')
+
 @section('style')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
     <style>

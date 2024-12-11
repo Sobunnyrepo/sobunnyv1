@@ -74,31 +74,5 @@
 
 {{-- <input id="autocompleteSearchText" type="text" placeholder="Escribe una ubicación" style="width: 300px;" /> --}}
 
+    @include('frontend.layout.partials.terms')
 
-{{-- <div class="modal-backdrop fade show"></div>
-<div class="modal show" id="currencyModal" tabindex="-1" role="dialog" aria-labelledby="currencyModalLabel" aria-hidden="false" style="display: block;">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="currencyModalLabel">Sobunny</h5>
-            </div>
-            <div class="modal-body">
-
-                <p>This website contains adult content</p>
-
-                <p>By continuing to use Sobunny, you agree you're over the age of 18 and have read and agreed to our terms.</p>
-                <p>Parents/guardians, you can learn more about online safety in the Assembly Four parents guide to adult content.</p>
-                <p>
-                    Sobunny has a zero-tolerance policy toward human trafficking, prostitution, and any other illegal conduct. We cooperate with law enforcement, pursuant to appropriate process, such as a subpoena, in investigating criminal activity. Activity that violates our zero-tolerance policy may result in a referral to law enforcement. I have no intention to, and will not, use this site in violation of Eros’s policies or any federal, state, or local law, and I agree to report violations to the appropriate authorities.
-                </p>
-                <p>
-                    I also agree to report suspected exploitation of minors and/or human trafficking to the appropriate authorities.
-
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Guardar</button>
-            </div>
-        </div>
-    </div>
-</div> --}}

@@ -13,6 +13,7 @@
 <script src="{{asset('assets/frontend/js/dynamic-script.js')}}"></script>
 <script src="{{ asset('assets/common/js/toastr.min.js') }}"></script>
 <script src="{{ asset('assets/common/js/search.js') }}"></script>
+<script src="{{ asset('assets/common/js/terms.js') }}"></script>
 
 {!! Toastr::message() !!}
 <script src="{{asset('assets/backend/js/select2.min.js')}}"></script>
