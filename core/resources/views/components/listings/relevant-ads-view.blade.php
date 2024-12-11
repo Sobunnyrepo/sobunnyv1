@@ -22,6 +22,7 @@
                      @endif
                 </div>
                 {{-- <div class="pricing head4">{{ float_amount_with_currency_symbol($listing->price) }}</div> --}}
+                <x-badge.user-verified-badge :listing="$listing"/>
 
                 <x-listings.listing-location :listing="$listing"/>
 
