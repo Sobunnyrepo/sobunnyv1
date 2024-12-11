@@ -158,10 +158,10 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="newModalLabel">{{ __('New Modal Title') }}</h5>
+                            <h5 class="modal-title" id="newModalLabel">NOW PAYMENTS</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" style="color:white">
 
                             <div>
                                 <h3>Make your payment in Bitcoin</h3>
@@ -175,7 +175,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('Close') }}</button>
-                            <button type="button" class="btn btn-primary">{{ __('Save changes') }}</button>
+                            {{-- <button type="button" class="btn btn-primary">{{ __('Save changes') }}</button> --}}
                         </div>
                     </div>
                 </div>
