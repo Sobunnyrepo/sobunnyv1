@@ -41,6 +41,7 @@ class PaymentController extends Controller
                 'expire_date' => null,
                 'payment_gateway' => 'Now Payments',
                 'amount' => $membership->price,
+                'price' => $membership->price,
             ]);
 
             $response = Http::withHeaders([

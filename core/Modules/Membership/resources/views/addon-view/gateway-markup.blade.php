@@ -7,7 +7,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     @if(Auth::guard('web')->check())
-                       <h4>{{ __('Buy membership') }}</h4>
+                       <h4 style="color:white">{{ __('Buy membership') }}</h4>
+                       <img src="{{asset('assets/backend/img/nowpayments.svg')}}" alt="">
                     @else
                         <x-notice.general-notice :description="__('Notice: Please login as a user to buy a membership.')" />
                     @endif
