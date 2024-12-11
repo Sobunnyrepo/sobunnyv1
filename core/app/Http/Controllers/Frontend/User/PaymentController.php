@@ -15,6 +15,7 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         $nowPayment = UserMembership::where('payment_status', 'pending')
+            ->where('membership_id', $request->membership_id)
             ->where('user_id', auth()->user()->id)->first();
 
 
