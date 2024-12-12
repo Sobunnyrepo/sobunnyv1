@@ -586,7 +586,7 @@
                                         <div class="col-xl-6">
                                             <div class="address box-shadow1 p-24">
                                                 @if (get_static_option('google_map_settings_on_off') == null)
-                                                     <div class="address-wraper">
+                                                     {{-- <div class="address-wraper">
                                                         <div class="row g-3">
                                                             <div class="col-sm-4">
                                                                 <div class="country">
@@ -640,7 +640,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div> 
+                                                    </div>  --}}
                                                 @else
                                                     <!--Google Map -->
                                                      {{-- <div class="location-map mt-3">
