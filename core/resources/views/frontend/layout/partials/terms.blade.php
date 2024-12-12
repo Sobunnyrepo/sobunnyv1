@@ -1,3 +1,4 @@
+<div class="modal-terms-container">
 <div class="modal-backdrop fade show hideItem"></div>
 <div class="modal show hideItem" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="currencyModalLabel" aria-hidden="false" style="display: block;">
     <div class="modal-dialog" role="document">
@@ -52,4 +53,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

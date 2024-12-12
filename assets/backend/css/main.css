@@ -3,11 +3,11 @@
     cursor: pointer !important;
 
 }
-.modal-backdrop.show
+.modal-terms-container .modal-backdrop.show
 {
-    opacity: .3 !important;
+    opacity: .96 !important;
 }
-.modal-content
+.modal-terms-container .modal-content
 {
     background: black;
     margin-top: 12rem;
@@ -27,7 +27,7 @@
     text-align: justify;
    
 }
-.modal-footer
+.modal-terms-container .modal-footer
 {
     border-top: 1px solid #dee2e638 !important;
     justify-content: space-around;
