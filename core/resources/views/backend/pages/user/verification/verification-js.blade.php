@@ -29,6 +29,7 @@
                     cancelButtonColor: '#d33',
                     confirmButtonText: 'Yes, change it!'
                 }).then((result) => {
+                    console.log(1)
                     if (result.isConfirmed) {
                         $.ajax({
                             url:"{{ route('admin.user.identity.verify.status') }}",
@@ -45,6 +46,7 @@
                             'success'
                         )
                     }
+                    console.log(2)
                     $('#userIdentityModal').modal('hide');
                 })
             })
