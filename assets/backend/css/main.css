@@ -132,3 +132,20 @@
     position: static !important;
   }
   
+  .membership-badge {
+    background: #95989d !important;
+}
+
+
+.varified {
+    padding: 1px 5px;
+  border-radius: 2px;
+  font-size:10px;
+  font-weight: 500;
+  color: #fff;
+  background: #22C55E;
+}
+.bunny_varified
+{
+    max-width: 110px!important;
+}
