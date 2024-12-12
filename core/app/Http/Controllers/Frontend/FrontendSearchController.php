@@ -81,7 +81,7 @@ class FrontendSearchController extends Controller
 
     public function getCity(Request $request)
     {
-        $cites = City::where('state_id', $request->state_id)->where('status', 1)->get();
+        $cites = City::where('state_id', $request->state_id)->where('status', 1)->orderBy('city', 'asc')->get();
         return response()->json([
             'status' => 'success',
             'cites' => $cites,

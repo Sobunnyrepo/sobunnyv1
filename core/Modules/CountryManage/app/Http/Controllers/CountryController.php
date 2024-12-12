@@ -66,7 +66,7 @@ class CountryController extends Controller
             FlashMsg::item_new(__('New Country Successfully Added'));
         }
 
-        $all_countries = Country::latest()->paginate(10);
+        $all_countries = Country::orderBy('country', 'asc')->latest()->paginate(10);
         return view('countrymanage::country.all-country',compact('all_countries'));
     }
 
@@ -185,7 +185,7 @@ class CountryController extends Controller
     function pagination(Request $request)
     {
         if($request->ajax()){
-            $all_countries = Country::latest()->paginate(10);
+            $all_countries = Country::orderBy('country', 'asc')->latest()->paginate(10);
             return view('countrymanage::country.search-result', compact('all_countries'))->render();
         }
     }
@@ -193,7 +193,7 @@ class CountryController extends Controller
     // search category
     public function search_country(Request $request)
     {
-        $all_countries= Country::where('country', 'LIKE', "%". strip_tags($request->string_search) ."%")
+        $all_countries= Country::orderBy('country', 'asc')->where('country', 'LIKE', "%". strip_tags($request->string_search) ."%")
             ->paginate(10);
         if($all_countries->total() >= 1){
             return view('countrymanage::country.search-result', compact('all_countries'))->render();

@@ -20,7 +20,7 @@ class FrontendController extends Controller
         if (empty($page_details)){
             // show any notice or
         }
-        $all_cities = City::where('status', 1)->get();
+        $all_cities = City::where('status', 1)->orderBy('city', 'asc')->get();
         return view('frontend.pages.frontend-home',compact('page_details','all_cities'));
 
     }

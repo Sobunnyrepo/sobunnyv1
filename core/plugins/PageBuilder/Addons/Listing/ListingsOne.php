@@ -584,7 +584,7 @@ class ListingsOne extends PageBuilderBase
             ->orderBy($order_by, $IDorDate)
             ->paginate($items);
 
-        $countries = Country::select("id", "country")
+        $countries = Country::orderBy('country', 'asc')->select("id", "country")
             ->where("status", 1)
             ->get();
 
@@ -690,7 +690,7 @@ class ListingsOne extends PageBuilderBase
 
 
             // KM Filter
-            $countryCodes = Country::where('status', 1)->pluck('country_code')->toArray();
+            $countryCodes = Country::orderBy('country', 'asc')->where('status', 1)->pluck('country_code')->toArray();
             $countryCodesStr = implode(',', $countryCodes);
         } else {
             $all_listings_list_json = '';

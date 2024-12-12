@@ -34,7 +34,7 @@ class FrontendListingController extends Controller
         if (empty($listing)) {
             return redirect_404_page();
         }
-        if ($listing->is_published === 0) {
+        if ($listing->is_published === 0&& !$this->isListingOwner($listing->user_id)) {
             return redirect_404_page();
         }
 
@@ -216,5 +216,9 @@ class FrontendListingController extends Controller
             </script>
             </div>
     HTML;
+    }
+    private function isListingOwner(int $userId):bool
+    {
+        return auth()->check() && auth()->user()->id === $userId;
     }
 }

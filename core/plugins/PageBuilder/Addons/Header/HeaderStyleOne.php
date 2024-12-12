@@ -135,7 +135,7 @@ class HeaderStyleOne extends PageBuilderBase
         $banner_left_images_01 = $settings['banner_left_images_01'] ?? '';
         $banner_right_images_02 = $settings['banner_right_images_02'] ?? '';
 
-        $cities = City::where('status', 1)->get();
+        $cities = City::where('status', 1)->orderBy('city', 'asc')->get();
 
     return $this->renderBlade('headers.style-one',[
         'padding_top' => $padding_top,

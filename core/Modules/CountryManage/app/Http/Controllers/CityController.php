@@ -35,7 +35,7 @@ class CityController extends Controller
         $all_countries = Country::all_countries();
         $all_states = State::all_states();
 
-        $all_cities = City::latest()->paginate(10);
+        $all_cities = City::latest()->orderBy('city', 'asc')->paginate(10);
         return view('countrymanage::city.all-city',compact('all_states','all_countries','all_cities'));
     }
 
@@ -183,7 +183,7 @@ class CityController extends Controller
     function pagination(Request $request)
     {
         if($request->ajax()){
-            $all_cities = City::latest()->paginate(10);
+            $all_cities = City::latest()->orderBy('city', 'asc')->paginate(10);
             return view('countrymanage::city.search-result', compact('all_cities'))->render();
         }
     }
@@ -192,6 +192,7 @@ class CityController extends Controller
     public function search_city(Request $request)
     {
         $all_cities= City::where('city', 'LIKE', "%". strip_tags($request->string_search) ."%")
+        ->orderBy('city', 'asc')
             ->paginate(10);
         if($all_cities->total() >= 1){
             return view('countrymanage::city.search-result', compact('all_cities'))->render();

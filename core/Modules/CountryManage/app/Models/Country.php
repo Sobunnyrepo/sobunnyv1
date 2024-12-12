@@ -22,7 +22,7 @@ class Country extends Model
 
     public static function all_countries()
     {
-        return self::where('status',1)->get();
+        return self::orderBy('country', 'asc')->where('status',1)->get();
     }
 
     public function states(){

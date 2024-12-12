@@ -23,7 +23,8 @@ class City extends Model
 
     public static function all_cities()
     {
-        return self::select(['id','city','country_id','state_id','status'])->where('status',1)->get();
+        return self::select(['id','city','country_id','state_id','status'])->where('status',1)
+        ->orderBy('city', 'asc')->get();
     }
 
     public function country()
