@@ -158,15 +158,15 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 style="color:white" class="modal-title" id="newModalLabel">NOW PAYMENTS</h5>
+                            <h5 class="modal-title" id="newModalLabel">NOW PAYMENTS</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body" style="color:white">
+                        <div class="modal-body">
 
                             <div style="display: flex; flex-direction:column; margin:auto">
-                                <h3 style="color:white">Make your payment in Bitcoin</h3>
-                                <p style="color:white"><strong>Bitcoin Address:</strong> <span id="direccionBitcoin"></span></p>
-                                <p style="color:white"><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
+                                <h3>Make your payment in Bitcoin</h3>
+                                <p><strong>Bitcoin Address:</strong> <span id="direccionBitcoin"></span></p>
+                                <p><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
                                 {{-- <img id="codigoQRImg" alt="Scan this QR code to pay" /> --}}
                                 <canvas style="margin: auto" id="codigoQR"></canvas>
                             </div>
