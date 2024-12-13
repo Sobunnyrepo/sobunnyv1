@@ -20,7 +20,6 @@ class NowpaymentsWebhookController extends Controller
     }
     public function store(Request $request)
     {
-        info('CustomSearchListingController@store');
         $status = $request->payment_status;
         $orderId = $request->order_id;
         $userMembership = UserMembership::find($orderId);
@@ -43,6 +42,5 @@ class NowpaymentsWebhookController extends Controller
                     'expire_date' => Carbon::now()->addDays($validity)
                 ]);
         }
-        info($request->all());
     }
 }

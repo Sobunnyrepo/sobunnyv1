@@ -54,6 +54,18 @@ class PaymentController extends Controller
                 'payment_gateway' => 'Now Payments',
                 'amount' => $membership->price,
                 'price' => $membership->price,
+                'initial_listing_limit' => $membership->listing_limit,
+                'initial_gallery_images' => $membership->gallery_images,
+                'initial_featured_listing' => $membership->featured_listing,
+                'initial_enquiry_form' => $membership->enquiry_form,
+                'initial_business_hour' => $membership->business_hour,
+                'initial_membership_badge' => $membership->membership_badge,
+                'listing_limit' => $membership->listing_limit,
+                'gallery_images' => $membership->gallery_images,
+                'featured_listing' => $membership->featured_listing,
+                'enquiry_form' => $membership->enquiry_form,
+                'business_hour' => $membership->business_hour,
+                'membership_badge' => $membership->membership_badge                
             ]);
 
             $response = Http::withHeaders([
