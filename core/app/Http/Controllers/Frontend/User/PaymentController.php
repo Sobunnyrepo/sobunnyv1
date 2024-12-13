@@ -30,6 +30,18 @@ class PaymentController extends Controller
             $nowPayment->price = $membership->price;
             $nowPayment->payment_gateway = 'nowpayments';
             $nowPayment->payment_status = 'pending';
+            $nowPayment->initial_listing_limit = $membership->listing_limit;
+            $nowPayment->initial_gallery_images = $membership->gallery_images;
+            $nowPayment->initial_featured_listing = $membership->featured_listing;
+            $nowPayment->initial_enquiry_form = $membership->enquiry_form;
+            $nowPayment->initial_business_hour = $membership->business_hour;
+            $nowPayment->initial_membership_badge = $membership->membership_badge;
+            $nowPayment->listing_limit = $membership->listing_limit;
+            $nowPayment->gallery_images = $membership->gallery_images;
+            $nowPayment->featured_listing = $membership->featured_listing;
+            $nowPayment->enquiry_form = $membership->enquiry_form;
+            $nowPayment->business_hour = $membership->business_hour;
+            $nowPayment->membership_badge = $membership->membership_badge;            
             $nowPayment->save();
 
 
