@@ -28,8 +28,8 @@ class MembershipController extends Controller
                 'type'=> 'required',
                 'title'=> ['required',Rule::unique('memberships')->where(fn ($query) => $query->where('membership_type_id', request()->type)),'max:191'],
                 'price'=> 'required',
-                'listing_limit'=> 'required|gt:0',
-                'feature'=> 'required|array',
+                'listing_limit'=> 'required',
+                // 'feature'=> 'required|array',
                 'status'=> 'nullable|array',
             ]);
 
@@ -64,7 +64,7 @@ class MembershipController extends Controller
                         'updated_at' => date('Y-m-d H:i:s'),
                     ];
                 }
-                $data = Validator::make($arr,["*.feature" => "required"]);
+                $data = Validator::make($arr,["*.feature" => "sometimes"]);
                 $data->validated();
                 MembershipFeature::insert($arr);
                 DB::commit();
@@ -85,8 +85,8 @@ class MembershipController extends Controller
                 'title'=> ['required',Rule::unique('memberships')->where(fn ($query) => $query->where('membership_type_id', request()->type))->ignore($id),'max:191'],
                 'type'=> 'required',
                 'price'=> 'required',
-                'listing_limit'=> 'required|gt:0',
-                'feature'=> 'required|array',
+                'listing_limit'=> 'required',
+                // 'feature'=> 'required|array',
                 'status'=> 'nullable|array'
             ],[
                 'title.unique'=> __('Title already exists for this membership type')
@@ -124,7 +124,7 @@ class MembershipController extends Controller
                         'updated_at' => Carbon::now(),
                     ];
                 }
-                $data = Validator::make($arr,["*.feature" => "required"]);
+                $data = Validator::make($arr,["*.feature" => "sometimes"]);
                 $data->validated();
                 MembershipFeature::insert($arr);
                 DB::commit();
