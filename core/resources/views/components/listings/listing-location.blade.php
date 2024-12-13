@@ -8,11 +8,19 @@
 
     @php
             $cities = [userListingLocation($listing)];
-            if(!empty($listing->secondaryCity)){
-                $cities[] = $listing->secondaryCity->city;
+            $cityId = Cookie::get('city_id');
+
+            $cityIdFilter = $_GET['city_id'] ?? null;
+            if($cityIdFilter){
+                Cookie::queue('city_id', $cityIdFilter, 60*24*30);
+                $cityId = $cityIdFilter;
             }
-            if(!empty($listing->tertiaryCity)){
-                $cities[] = $listing->tertiaryCity->city;
+
+            if(!empty($listing->secondaryCity) && $listing->secondaryCity->id == $cityId){ 
+                $cities = [$listing->secondaryCity->city];
+            }
+            if(!empty($listing->tertiaryCity) && $listing->tertiaryCity->id == $cityId){
+                $cities = [$listing->tertiaryCity->city];
             }
     @endphp
 
