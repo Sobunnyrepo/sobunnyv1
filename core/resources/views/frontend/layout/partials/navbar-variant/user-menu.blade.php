@@ -341,6 +341,7 @@
                         </select>
                     </div>
                 @endif
+                </div>
         @endif
 
         @if (empty(get_static_option('google_map_settings_on_off')))
