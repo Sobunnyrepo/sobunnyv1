@@ -698,17 +698,17 @@
                                                         placeholder="{{ __('Address') }}">
                                                 </div> --}}
                                             </div>
-                                            <div class="video box-shadow1 p-24 mt-3 mb-3">
+                                            {{-- <div class="video box-shadow1 p-24 mt-3 mb-3">
                                                 <label for="vedio-link">{{ __('Video Url') }}</label>
                                                 <input type="text" class="input-filed w-100" name="video_url"
                                                     id="video_url" value="{{ old('video_url') }}"
                                                     placeholder="{{ __('youtube url') }}">
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="col-xl-3">
                                             <div class="right-sidebar">
 
-                                                <div class="box-shadow1 feature p-24">
+                                                {{-- <div class="box-shadow1 feature p-24">
                                                     <label>
                                                         <input type="checkbox" name="is_featured" id="is_featured"
                                                             value="" class="custom-check-box feature_disable_color">
@@ -720,7 +720,7 @@
                                                                 href="{{ url('/' . $membership_page_url ?? 'x') }}">{{ __('paid membership') }}</a>
                                                         </p>
                                                     @endif
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="box-shadow1 tags p-24 mt-3">
                                                     <label for="tags">{{ __('Tags') }}</label>

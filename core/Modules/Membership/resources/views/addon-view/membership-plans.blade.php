@@ -17,14 +17,13 @@
                             <span class="subTittle">{{ $membership->membership_type?->type }}</span>
                         </span>
                         <div class="btn-wrapper">
-                            @if($membership->price == 0)
+                            @if($membership->price == 0&& $membership->id!=1)
                                 <!-- Free Membership Plan -->
                                 @php
                                     $buttonText = __('Get Started');
                                     $buttonUrl = url('/user-register');
                                 @endphp
-
-                                  @if(!empty($user_current_membership) && $user_current_membership->membership_id === $membership->id)
+                                  @if(!empty($user_current_membership) && $user_current_membership->membership_id === $membership->id && $membership->id!=1)
                                         @php
                                             $buttonText = __('Current Plan');
                                             $buttonUrl = null;

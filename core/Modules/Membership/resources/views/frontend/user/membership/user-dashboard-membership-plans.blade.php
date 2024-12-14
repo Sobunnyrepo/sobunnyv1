@@ -20,14 +20,14 @@
                    </span>
 
                     <div class="btn-wrapper">
-                        @if($membership->price == 0)
+                        @if($membership->price == 0 && $membership->id!=1)
                             <!-- Free Membership Plan -->
                             @php
                                 $buttonText = __('Get Started');
                                 $buttonUrl = url('/user-register');
                             @endphp
 
-                            @if(!empty($user_current_membership) && $user_current_membership->membership_id === $membership->id)
+                            @if(!empty($user_current_membership) && $user_current_membership->membership_id === $membership->id&& $membership->id!=1)
                                 @php
                                     $buttonText = __('Current Plan');
                                     $buttonUrl = null;
@@ -69,6 +69,8 @@
                                         $modalTarget = null;
                                     }
                             @endphp
+                                                                @if($membership->id!=1)
+
                             <button class="cmn-btn-outline1 choose_membership_plan"
                                     data-bs-toggle="modal"
                                     data-id="{{ $membership->id }}"
@@ -76,6 +78,8 @@
                                     data-bs-target="{{ $modalTarget }}">
                                 {{ $buttonText }}
                             </button>
+                            @endif
+
                         @endif
                     </div>
 

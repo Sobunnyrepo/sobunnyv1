@@ -426,13 +426,13 @@
                                                     </div>
 
                                                     <!-- video url -->
-                                                    <div class="form__input__single">
+                                                    {{-- <div class="form__input__single">
                                                         <label class="form__input__single__label">{{ __('Video Url') }} </label>
                                                         <div class="input-form input-form2">
                                                             <input type="text" class="form__control radius-5" name="video_url" id="video_url" value="{{ old('video_url') }}" placeholder="{{__('youtube url')}}">
                                                         </div>
                                                         <small class="text-danger video_url_design">{{ __('Example:') }} https://www.youtube.com/watch?v=IcM8_Llgxf4&t=1s </small>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
 
                                                 <div class="col-4">

@@ -30,10 +30,18 @@ class NowpaymentsWebhookController extends Controller
 
         $validity = $membershipType->validity;
         if ($status == 'finished') {
+            UserMembership::where('id', '!=', $userMembership->id)
+                ->where('user_id', $userMembership->user_id)
+                ->delete();
             $userMembership->status = 1;
-            $userMembership->payment_status = 'completed';
+            $userMembership->payment_status = 'complete';
             $userMembership->expire_date = Carbon::now()->addDays($validity);
             $userMembership->save();
+            MembershipHistory::where('user_id', $userMembership->user_id)
+                ->where('payment_status', 'pending')
+                ->update([
+                    'status' => 0,
+                ]);
             MembershipHistory::where('user_id', $userMembership->user_id)
                 ->where('payment_status', 'pending')
                 ->update([
