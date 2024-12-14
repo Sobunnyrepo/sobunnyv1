@@ -328,7 +328,7 @@
         </div>
         <!--google map Distance filter end -->
         <!-- Location -->
-        @if (empty(get_static_option('google_map_settings_on_off')))
+        {{-- @if (empty(get_static_option('google_map_settings_on_off')))
             <div class="locaton catagoriesWraper mb-4 class2">
                 @if (!empty($country_on_off))
                     <div class="catagories">
@@ -341,7 +341,7 @@
                         </select>
                     </div>
                 @endif
-        @endif
+        @endif --}}
 
         @if (empty(get_static_option('google_map_settings_on_off')))
             @if (!empty($state_on_off))
