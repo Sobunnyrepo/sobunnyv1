@@ -1,3 +1,7 @@
+<div class="cateLeftContent">
+
+<div class="cateSidebar1">
+
 <div class="catagoriesWraper mb-4">
     {{-- <form action="custom-search-listings" method="POST" enctype="multipart/form-data" id="searchListingsForm"> --}}
         {{-- <form action="listings" method="GET" enctype="multipart/form-data" id="searchListingsForm"> --}}
@@ -168,4 +172,7 @@
     </div> --}}
     {{-- </form> --}}
 </div>
+</div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

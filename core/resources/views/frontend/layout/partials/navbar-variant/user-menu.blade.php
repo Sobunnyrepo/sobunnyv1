@@ -286,130 +286,7 @@
 </ul>
 
 
-<div class="cateLeftContent">
-    <div class="cateSidebar1">
 
-
-        <!--Search any title filter start -->
-        @if (!empty($listing_search_by_text_on_off))
-            <div class="catagoriesWraper mb-4">
-                <div class="catagories w-100">
-                    <div class="single-category-service">
-                        <div class="single-select">
-                            <input type="text" class="search-input form-control" id="search_by_query"
-                                placeholder="{{ $search_placeholder }}" name="q"
-                                value="{{ $text_search_value }}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endif
-        <!--Search any title filter end -->
-
-        <!--Distance google map filter -->
-        <div class="catagoriesWraper mb-4" style="display: none !important">
-            <div class="catagories w-100">
-                <!-- autocomplete address -->
-
-                <!-- Distance range-->
-                <div id="distance-slider"></div>
-                {{-- <div class="slider-container slider-kilometer">
-                                <input type="hidden" name="distance_kilometers_value" id="distance_kilometers_value">
-                                <div class="cateTitle mb-2">{{__('Distance')}}</div>
-                                <div id="slider" class="slider-range mt-2"></div>
-                                <div class="d-flex align-items-center gap-2 mt-2">
-                                    <div id="slider-value" class="slider-range-value"></div>
-                                    <span class="km_title_text">{{ __('km') }}</span>
-                                </div>
-                            </div> --}}
-
-                <!-- cancel and apply button start -->
-            </div>
-        </div>
-        <!--google map Distance filter end -->
-        <!-- Location -->
-        <p class="googleMap">
-            {{get_static_option('google_map_settings_on_off')}}
-        </p>
-        @if (empty(get_static_option('google_map_settings_on_off')))
-            <div class="locaton catagoriesWraper mb-4">
-                @if (!empty($country_on_off))
-                    <div class="catagories">
-                        <select id="search_by_country" name="country" class="categorySelect">
-                            <option value="">{{ $country_text }}</option>
-                            @foreach ($countries as $cont)
-                                <option @if (!empty(request()->get('country')) && request()->get('country') == $cont->id) selected @endif
-                                    value="{{ $cont->id }}">{{ $cont->country }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                @endif
-        @endif
-
-        @if (empty(get_static_option('google_map_settings_on_off')))
-            @if (!empty($state_on_off))
-                @php  $fetch_cities = '';  @endphp
-                @if ($country_on_off !== 'on')
-                    @php
-                        $get_listing_state_id = $all_listings->pluck('city_id');
-                        $all_sates = \Modules\CountryManage\app\Models\City::whereIn('id', $get_listing_state_id)
-                            ->where('status', 1)
-                            ->get();
-                        foreach ($all_sates as $states) {
-                            $fetch_cities .=
-                                '<option selected value=' . $states->id . '>' . $states->city . '</option>';
-                        }
-                    @endphp
-                @endif
-                <div class="catagories">
-                    <select id="search_by_state" name="state">
-                        <option value=""> {{ $state_text }}</option>
-                        @foreach ($listings_state as $listing_state)
-                            {
-                            <option @if (!empty(request()->get('state')) && request()->get('state') == $listing_state->id) selected @endif
-                                value="{{ $listing_state->id }}">{{ $listing_state->state }}</option>
-                        @endforeach
-                        {{ $fetch_cities }}
-                    </select>
-                </div>
-            @endif
-        @endif
-
-        @if (empty(get_static_option('google_map_settings_on_off')))
-            @if (!empty($city_on_off))
-                <div class="catagories">
-                    <select id="search_by_city" name="city">
-                        <option value=""> {{ $city_text }}</option>
-                        @foreach ($listings_city as $listing_city)
-                            
-                            <option @if (!empty(request()->get('city')) && request()->get('city') == $listing_city->id) selected @endif
-                                value="{{ $listing_city->id }}">{{ $listing_city->city }}</option>
-                        @endforeach
-                        {{ $fetch_cities ?? 0 }}
-                    </select>
-                </div>
-            @endif
-    </div>
-    @endif
-
-    @include('filters.filtersListing')
-
-    @if (!empty($sort_by_on_off))
-        <div class="catagoriesWraper px-0">
-            <div class="catagories mx-3">
-                <select id="search_by_sorting" name="sortby">
-                    <option value="">{{ __('Sort By') }}</option>
-                    @foreach ($sortby_search as $value => $text)
-                        <option @if (!empty(request()->get('sortby')) && request()->get('sortby') == $value) selected @endif value="{{ $value }}">
-                            {{ $text }}</option>
-                    @endforeach
-                </select>
-            </div>
-        </div>
-    @endif
-
-</div>
-</div>
 
 @if(!empty($current_page_url) && strpos($current_page_url, '/listings') === false)
 {{-- <p>
@@ -425,6 +302,7 @@
 </form>
 
 @endif
+@include('filters.filtersListing')
 
 <style>
     .cateLeftContent {
