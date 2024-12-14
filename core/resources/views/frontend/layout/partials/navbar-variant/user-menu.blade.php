@@ -329,9 +329,9 @@
         <!--google map Distance filter end -->
         <!-- Location -->
         @if (empty(get_static_option('google_map_settings_on_off')))
-            <div class="locaton catagoriesWraper mb-4">
+            <div class="locaton catagoriesWraper mb-4 test1">
                 @if (!empty($country_on_off))
-                    <div class="catagories">
+                    <div class="catagories test2">
                         <select id="search_by_country" name="country" class="categorySelect">
                             <option value="">{{ $country_text }}</option>
                             @foreach ($countries as $cont)
