@@ -57,6 +57,18 @@
                                     </div>
                                 @endif
                             </a>
+                            <a class="radius-5" href="{{ asset('assets/uploads/verification/'.$user_identity_details->selfie) }}" target="_blank">
+                                @if( pathinfo($user_identity_details->selfie, PATHINFO_EXTENSION) === 'pdf')
+                                    <a class="btn btn-info radius-5" href="{{ asset('assets/uploads/verification/'.$user_identity_details->selfie) }}" target="_blank">
+                                        {{ __('View PDF Document') }}
+                                    </a>
+                                @else
+                                    <div class="document-preview">
+                                        <img src="{{ asset('assets/uploads/verification/'.$user_identity_details->selfie) }}" alt="back-document">
+                                    </div>
+                                @endif
+                            </a>
+
                         </div>
                                @php
                                    if (!empty($user_identity_details->verify_by)) {

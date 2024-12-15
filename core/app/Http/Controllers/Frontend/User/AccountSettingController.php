@@ -146,8 +146,8 @@ class AccountSettingController extends Controller
                 }
                 $selfieName = null;
                 if($selfie = $request->file('selfie')){
-                    $selfieName = time().'-'.uniqid().'.'.$selfie->getClientOriginalExtension();
-                    $selfie->move('assets/uploads/verification',$back_imageName);
+                    $selfieName = 'selfie-'.uniqid().'.'.$selfie->getClientOriginalExtension();
+                    $selfie->move('assets/uploads/verification',$selfieName);
                 }
 
                 $user = Auth::guard('web')->user()->id;

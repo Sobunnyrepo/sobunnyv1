@@ -169,6 +169,7 @@
                                 <p><strong>Amount in Bitcoin:</strong> <span id="montoBitcoin"></span></p>
                                 {{-- <img id="codigoQRImg" alt="Scan this QR code to pay" /> --}}
                                 <canvas style="margin: auto" id="codigoQR"></canvas>
+                                <p>Payment processing could take between <strong>30</strong> to <strong>60</strong> minutes depending on network congestion. You will receive an email confirmation once payment has been processed.</p>
                             </div>
 
 

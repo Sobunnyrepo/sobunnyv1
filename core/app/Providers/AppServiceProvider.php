@@ -38,6 +38,10 @@ class AppServiceProvider extends ServiceProvider
         if (get_static_option('site_force_ssl_redirection') === 'on'){
             URL::forceScheme('https');
         }
+        if(config('app.env') === 'local'){
+            URL::forceScheme('http');
+        }
+
         Paginator::useBootstrap();
         $this->loadViewsFrom(__DIR__.'/../../plugins/PageBuilder/views','pagebuilder');
     }
