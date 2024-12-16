@@ -16,7 +16,7 @@
     <div class="loginArea section-padding2">
         <div class="container">
             <div class="row">
-                <div class="col-xl-5 col-lg-5 p-0  order-lg-1 order-1 loginLeft-img">
+                {{-- <div class="col-xl-5 col-lg-5 p-0  order-lg-1 order-1 loginLeft-img">
                     <div class="loginLeft-img">
                         <div class="login-cap">
                             <h3 class="tittle">{{ get_static_option('register_page_title') ?? __('Register') }}</h3>
@@ -26,7 +26,7 @@
                             {!! render_image_markup_by_attachment_id(get_static_option('register_page_image')) !!}
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-xl-7 col-lg-7 order-lg-1 order-0 login-Wrapper">
 
                     {{-- @if(!empty(get_static_option('site_google_captcha_enable')))
