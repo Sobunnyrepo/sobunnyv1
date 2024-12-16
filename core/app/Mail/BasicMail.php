@@ -19,8 +19,16 @@ class BasicMail extends Mailable
     }
     public function build()
     {
-        return $this->from(get_static_option('site_global_email'), get_static_option('site_title'))
+        $fromEmail = get_static_option('site_global_email') ?: 'info@sobunny.com';
+        $fromName = get_static_option('site_title') ?: 'Default Name';
+        $fromEmail = 'info@sobunny.com';
+        $fromName = 'Sobunny';
+        return $this->from($fromEmail, $fromName)
             ->subject($this->data['subject'])
             ->markdown('mail.basic-mail-template');
+
+        // return $this->from(get_static_option('site_global_email'), get_static_option('site_title'))
+        //     ->subject($this->data['subject'])
+        //     ->markdown('mail.basic-mail-template');
     }
 }

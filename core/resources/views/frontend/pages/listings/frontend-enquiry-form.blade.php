@@ -1,4 +1,4 @@
-@if($user_enquiry_form === true)
+{{-- @if($user_enquiry_form === true)
     <div class="business-hour enquiry-hour box-shadow1 mt-4">
         <h3 class="head5 enquiry-head d-flex">{{ __('Enquiry Form') }} </h3>
         <div class="enquiry-wraper">
@@ -32,4 +32,4 @@
             </div>
         </div>
     </div>
-@endif
+@endif --}}
