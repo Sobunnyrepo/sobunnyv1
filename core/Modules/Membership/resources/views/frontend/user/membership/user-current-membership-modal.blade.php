@@ -115,7 +115,7 @@
                                 <!-- right part -->
                                 <div class="right_part">
                                     <!-- Single Items -->
-                                    <div class="row_1 d-flex gap-3">
+                                    {{-- <div class="row_1 d-flex gap-3">
                                         <div class="col_1">
                                             {{ __('Business Hour') }}
                                         </div>
@@ -126,9 +126,9 @@
                                                 <i class="las la-times-circle text-danger fs-4 mx-2"></i>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!-- Single Items -->
-                                    <div class="row_1 d-flex gap-3">
+                                    {{-- <div class="row_1 d-flex gap-3">
                                         <div class="col_1">
                                             {{ __('Enquiry Form') }}
                                         </div>
@@ -139,7 +139,7 @@
                                                 <i class="las la-times-circle text-danger fs-4 mx-2"></i>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!-- Single Items -->
                                     <div class="row_1 d-flex gap-3">
                                         <div class="col_1">

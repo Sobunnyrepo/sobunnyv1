@@ -76,23 +76,23 @@
                                 <!-- right part -->
                                 <div class="right_part">
                                     <!-- Single Items -->
-                                    <div class="row_1 d-flex gap-3">
+                                    {{-- <div class="row_1 d-flex gap-3">
                                         <div class="col_1">
                                             {{ __('Business Hour') }}
                                         </div>
                                         <div class="col_2">
                                             <strong id="business_hour"> </strong>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!-- Single Items -->
-                                    <div class="row_1 d-flex gap-3">
+                                    {{-- <div class="row_1 d-flex gap-3">
                                         <div class="col_1">
                                             {{ __('Enquiry Form') }}
                                         </div>
                                         <div class="col_2">
                                             <strong id="enquiry_form"> </strong>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!-- Single Items -->
                                     <div class="row_1 d-flex gap-3">
                                         <div class="col_1">

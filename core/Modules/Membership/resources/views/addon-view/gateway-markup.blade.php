@@ -8,7 +8,7 @@
                 <div class="modal-header">
                     @if(Auth::guard('web')->check())
                        <h4>{{ __('Buy membership') }}</h4>
-                       <img src="{{asset('assets/backend/img/nowpayments.svg')}}" alt="">
+                       <img style="max-width: 45% !important;" src="{{asset('assets/backend/img/nowpayments.png')}}" alt="">
                     @else
                         <x-notice.general-notice :description="__('Notice: Please login as a user to buy a membership.')" />
                     @endif
@@ -53,4 +53,4 @@
         </form>
     </div>
 </div>
-<input type="text" class="membershipId">
+<input type="hidden" class="membershipId">

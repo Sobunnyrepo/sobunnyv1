@@ -88,7 +88,7 @@
                                                                     $renew_expire_days = intval(get_static_option('renew_button_before_expire_days')) ?? 7;
                                                                 @endphp
 
-                                                                 <a href="@if($page_url) {{ url('/' . $page_url->slug) }}@endif"  class="red-global-btn"> {{__('Upgrade') }}</a>
+                                                                 {{-- <a href="@if($page_url) {{ url('/' . $page_url->slug) }}@endif"  class="red-global-btn"> {{__('Upgrade') }}</a> --}}
 
                                                                 <!-- If not expired, payment status is complete, and within 7 days, show the renewal button -->
                                                                 @if($user_membership->payment_status == 'complete' && $expireDate >= $today &&
