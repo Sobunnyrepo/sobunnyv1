@@ -10,7 +10,7 @@
                             <input type="hidden" name="from_user" id="from_user"  value="{{ Auth::guard('web')->user()->id }}">
                             <input type="hidden" name="listing_id" id="listing_id"  value="{{ $listing->id }}">
                             <div class="send-massage">
-                                <button type="submit" class="cmn-btn2 w-100">{{ __('Send a Massage') }}</button>
+                                <button type="submit" class="cmn-btn2 w-100 btn-message">{{ __('Send a Massage') }}</button>
                             </div>
                         </form>
                     </div>
@@ -22,14 +22,14 @@
                             <input type="hidden" name="from_user" id="from_user"  value="{{ Auth::guard('web')->user()->id }}">
                             <input type="hidden" name="listing_id" id="listing_id"  value="{{ $listing->id }}">
                             <div class="send-massage">
-                                <button type="submit" class="cmn-btn2 w-100">{{ __('Send a Massage') }}</button>
+                                <button type="submit" class="cmn-btn2 w-100 btn-message">{{ __('Send a Massage') }}</button>
                             </div>
                         </form>
                     </div>
                 @endif
             @else
                 <div class="send-massage">
-                    <a href="javascript:void(0)" class="cmn-btn2 w-100" data-bs-toggle="modal" data-bs-target="#loginModal">{{ __('Sign in for Massage') }}</a>
+                    <a href="javascript:void(0)" class="cmn-btn2 w-100 btn-message" data-bs-toggle="modal" data-bs-target="#loginModal">{{ __('Sign in for Massage') }}</a>
                 </div>
             @endif
         @endif
