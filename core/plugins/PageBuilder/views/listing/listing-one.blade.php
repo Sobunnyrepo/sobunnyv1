@@ -397,7 +397,7 @@
             function generateContent(place){
                   var content = `<div class="singleFeatureCard inside_google_map_card w-100">
                                     <div class="featureImg">
-                                           <a href=\"{{$listing_details_route}}/`+place.slug+`\" class="main-card-image">
+                                           <a href=\"{{$listing_details_route}}/`+place.slug+`\" class="main-card-image main-card-listing-image">
                                              `+place.image_url+`
                                            </a>
                                     </div>

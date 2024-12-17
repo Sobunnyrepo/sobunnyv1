@@ -44,3 +44,5 @@ push-server-database:
 	@scp sobunny.sql root@$(SERVER_IP):/home/sobunnyv1/
 ngrok:
 	@ngrok http --host-header=rewrite http://localhost:8088;
+pull-images-server:
+	scp -r root@$(SERVER_IP):/home/sobunnyv1/assets/uploads .

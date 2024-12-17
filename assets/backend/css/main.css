@@ -149,3 +149,13 @@
 {
     max-width: 110px!important;
 }
+.main-card-listing-image
+{
+  height: 350px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-card-listing-image {
+    height: 470px !important;
+  }
+}
