@@ -4,6 +4,7 @@ namespace App\Feature\Shared\UseCases;
 
 use App\Feature\Shared\Dto\FilterGroup;
 use App\Feature\Shared\Dto\FilterParam;
+use Illuminate\Support\Facades\Cookie;
 
 class CreateDefaultFilters
 {
@@ -25,6 +26,7 @@ class CreateDefaultFilters
         $servicingId = request()->get('servicing_id') ?? null;
         $heightId = request()->get('height_id') ?? null;
         $cityId = request()->get('city_id') ?? null;
+        $cityId = Cookie::get('city_id') ?? $cityId;
         $params = [];
 
 
