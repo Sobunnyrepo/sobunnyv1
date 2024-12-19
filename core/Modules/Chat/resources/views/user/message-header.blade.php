@@ -1,4 +1,4 @@
-<div class="chat-wrapper-details-header profile-border-bottom flex-between" id="livechat-message-header"
+{{-- <div class="chat-wrapper-details-header profile-border-bottom flex-between" id="livechat-message-header"
     data-member-id="{{ $data->member->id }}">
     <div class="chat-wrapper-details-header-left d-flex gap-2 align-items-center">
         <div class="chat-wrapper-details-header-left-author d-flex gap-2 align-items-center">
@@ -16,4 +16,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
