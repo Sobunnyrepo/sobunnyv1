@@ -12,7 +12,7 @@
             <input type="hidden" name="from_user" id="from_user"  value="{{ Auth::guard('web')->user()->id }}">
             <input type="hidden" name="listing_id" id="listing_id"  value="{{ $listing->id }}">
             <div class="send-massage">
-                <button type="submit" class="w-100">{{ __('Send a Massage') }}</button>
+                <button type="submit" class="w-100">{{ __('Send a Message') }}</button>
             </div>
         </form>
     </div>

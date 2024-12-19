@@ -2,7 +2,7 @@
     @if(is_null($listing->admin_id) && $listing->user_id != null && $listing->user_id != 0)
         @if(auth()->check() && Auth::guard('web')->user()->id !== $listing->user_id)
             @if(auth()->check())
-                @if($listing->user_id !== Auth::guard('web')->user()->id)
+                @if($listing->user_id !== Auth::guard('web')->user()->id&&Auth::guard('web')->user()->role=='client')
                     <div class="btn-wrapper">
                         <form action="{{ route('user.message.send') }}" method="post" enctype="multipart/form-data">
                             @csrf
@@ -10,7 +10,7 @@
                             <input type="hidden" name="from_user" id="from_user"  value="{{ Auth::guard('web')->user()->id }}">
                             <input type="hidden" name="listing_id" id="listing_id"  value="{{ $listing->id }}">
                             <div class="send-massage">
-                                <button type="submit" class="cmn-btn2 w-100 btn-message">{{ __('Send a Massage') }}</button>
+                                <button type="submit" class="cmn-btn2 w-100 btn-message">{{ __('Send a Message') }}</button>
                             </div>
                         </form>
                     </div>
@@ -22,7 +22,7 @@
                             <input type="hidden" name="from_user" id="from_user"  value="{{ Auth::guard('web')->user()->id }}">
                             <input type="hidden" name="listing_id" id="listing_id"  value="{{ $listing->id }}">
                             <div class="send-massage">
-                                <button type="submit" class="cmn-btn2 w-100 btn-message">{{ __('Send a Massage') }}</button>
+                                <button type="submit" class="cmn-btn2 w-100 btn-message">{{ __('Send a Message') }}</button>
                             </div>
                         </form>
                     </div>
