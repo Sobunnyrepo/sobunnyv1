@@ -13,7 +13,7 @@
                     <div class="row">
                         @if($user_chat_list->count() > 0)
                             <!-- all user listing  area-->
-                            <div class="col-xl-5 col-lg-6 col-md-12" style="display: none;">
+                            <div class="col-xl-5 col-lg-6 col-md-12">
                                 <div class="userList">
                                     <!-- Single user list -->
                                     @foreach($user_chat_list as $user_chat)
@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                             <!--all message listing area -->
-                            <div class="col-xl-7 col-lg-6 col-md-12" style="width: 100%">
+                            <div class="col-xl-7 col-lg-6 col-md-12">
                                 <div class="messagesDetails">
                                     <!-- Header top for chat user info -->
                                     <div class="showProduct mb-5">

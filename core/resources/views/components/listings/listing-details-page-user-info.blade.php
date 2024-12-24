@@ -2,7 +2,7 @@
     @if(is_null($listing->admin_id) && $listing->user_id != null && $listing->user_id != 0)
         @if(auth()->check() && Auth::guard('web')->user()->id !== $listing->user_id)
             @if(auth()->check())
-                @if($listing->user_id !== Auth::guard('web')->user()->id&&Auth::guard('web')->user()->role=='client')
+                @if($listing->user_id !== Auth::guard('web')->user()->id&&Auth::guard('web')->user()->role=='client'&&$listing->chat==1)
                     <div class="btn-wrapper">
                         <form action="{{ route('user.message.send') }}" method="post" enctype="multipart/form-data">
                             @csrf

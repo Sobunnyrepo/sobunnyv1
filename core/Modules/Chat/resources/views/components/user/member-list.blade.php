@@ -13,7 +13,16 @@
         </div>
         <div class="proCaption">
             <h5>
-                <a href="#" class="messageTittle">{{ $userChat->member?->fullname }}</a>
+                @php 
+                $listing = App\Models\Backend\Listing::where('user_id', $userChat->member?->id)
+                ->where('is_published', 1)
+                ->where('status', 1)
+                ->first();
+                // dump($listing->toArray());
+                @endphp
+                                <a href="#" class="messageTittle">{{ $listing->title }}</a>
+
+                {{-- <a href="#" class="messageTittle">{{ $userChat->member?->fullname }}</a> --}}
             </h5>
             <div class ="unseen_message_count_{{$userChat?->member?->id}}">
                 @if($userChat->user_unseen_msg_count > 0)
