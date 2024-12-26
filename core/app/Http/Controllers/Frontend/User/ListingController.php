@@ -259,6 +259,7 @@ class ListingController extends Controller
             $listing->cater_1 = !!$request->input('cater_1');
             $listing->cater_2 = !!$request->input('cater_2');
             $listing->cater_3 = !!$request->input('cater_3');
+            $listing->chat = !!$request->input('chat');
 
 
             if ($request->input('more_cities_id')) {
@@ -514,6 +515,7 @@ class ListingController extends Controller
             $listing->cater_1 = !!$request->input('cater_1');
             $listing->cater_2 = !!$request->input('cater_2');
             $listing->cater_3 = !!$request->input('cater_3');
+            $listing->chat = !!$request->input('chat');
 
             if ($request->input('more_cities_id')) {
                 $listing->second_city_id = $request->input('more_cities_id')[0];

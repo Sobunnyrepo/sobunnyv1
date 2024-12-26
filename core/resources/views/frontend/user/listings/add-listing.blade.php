@@ -472,6 +472,18 @@
                                                         </div> --}}
                                                     </form>
                                                 </div>
+                                                <div class="col-sm-4">
+                                                    <div class="item-catagory-wraper">
+                                                        <label>{{ __('Chat') }}
+                                                            <span class="text-danger">*</span> </label>
+                                                        <select name="chat" id="chat"
+                                                            class="select-itms select2_activation">
+                                                            <option value="1">Active</option>
+                                                            <option value="0" selected>Inactive</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
                                                 <div class="description box-shadow1 p-24 mt-4">
                                                     <label for="description">{{ __('Description') }}
                                                         {{-- <span
@@ -483,6 +495,7 @@
                                                         placeholder="{{ __('Enter a Description') }}">{{ old('description') }}</textarea>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="right-sidebar">
