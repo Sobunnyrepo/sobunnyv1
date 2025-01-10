@@ -2,9 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\BasicMail;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class TestCommand extends Command
 {
@@ -27,6 +29,20 @@ class TestCommand extends Command
      */
     public function handle()
     {
+
+        dump([
+            'url' => env('MAIL_URL'),
+            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'port' => env('MAIL_PORT', 587),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+        ]);
+        Mail::to('alfredo.gutierrez.92@hotmail.com')->send(new BasicMail([
+            'subject' => 'ASUNTILLO',
+            'message' => 'MENSAJILLO',
+        ]));
+        return;
         try {
             $client = new Client();
             dump(config('app.nowpayment_api_key'));
