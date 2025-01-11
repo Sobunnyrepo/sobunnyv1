@@ -33,9 +33,9 @@ use Modules\Wallet\app\Models\WalletHistory;
 
 class AdminDashboardController extends Controller
 {
-    // public function __construct() {
-    //     $this->middleware('auth:admin');
-    // }
+    public function __construct() {
+        $this->middleware('auth:admin');
+    }
 
     public function adminDashboard()
     {
