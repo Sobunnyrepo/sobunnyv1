@@ -89,3 +89,9 @@
 <body class="new-style">
 {!! renderBodyStartHooks() !!}
 @include('frontend.layout.partials.notice')
+
+<style>
+    html {  
+        background: black !important;
+    }
+</style>
