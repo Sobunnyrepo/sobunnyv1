@@ -87,6 +87,9 @@
  
 </head>
 <body class="new-style">
+    <div style="position: absolute; background:black; z-index:1000000;     width: 100vw;
+    height: 100vh;
+" class="loading-curtain"></div>
 {!! renderBodyStartHooks() !!}
 @include('frontend.layout.partials.notice')
 
@@ -95,3 +98,12 @@
         background: black !important;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Your code here
+        setTimeout(function() {
+            document.querySelector('.loading-curtain').style.display = 'none';
+        }, 500); // Adjust the timeout duration as needed
+    });
+</script>
