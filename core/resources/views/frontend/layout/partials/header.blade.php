@@ -64,6 +64,16 @@
     @if(!empty(get_static_option('site_third_party_tracking_code')))
         {!! get_static_option('site_third_party_tracking_code') !!}
     @endif
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11560117755">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11560117755');
+</script>
 </head>
 <body class="new-style">
 {!! renderBodyStartHooks() !!}
