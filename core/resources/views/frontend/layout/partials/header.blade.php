@@ -16,6 +16,18 @@
 <meta property="og:description" content="Top-tier luxury escort services in major cities across the USA. Discreet dates and premium companions.">
 <meta property="og:image" content="URL-to-your-image.jpg">
 <meta name="description" content="Exclusive luxury escort services in Miami, New York, Los Angeles, Las Vegas, Chicago, Washington DC, Atlanta, Boston, Austin, San Francisco, Philadelphia, Dallas. Find discreet dates and premium companions for unique experiences in these cities.">
+    
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11560117755">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11560117755');
+</script>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -64,16 +76,7 @@
     @if(!empty(get_static_option('site_third_party_tracking_code')))
         {!! get_static_option('site_third_party_tracking_code') !!}
     @endif
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11560117755">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11560117755');
-</script>
+ 
 </head>
 <body class="new-style">
 {!! renderBodyStartHooks() !!}
