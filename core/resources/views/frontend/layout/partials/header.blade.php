@@ -27,7 +27,15 @@
 
   gtag('config', 'AW-11560117755');
 </script>
-   
+   <!-- Event snippet for Vista de una página conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11560117755/_G_eCJeg2IsaEPvLpYgr',
+      'value': 1.0,
+      'currency': 'COP'
+  });
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
