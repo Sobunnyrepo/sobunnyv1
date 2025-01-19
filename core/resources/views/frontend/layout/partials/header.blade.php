@@ -99,7 +99,7 @@
     }
 </style> --}}
 
-<script>
+{{-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Your code here
         setTimeout(function() {
@@ -110,4 +110,4 @@
             }, 1500); // Match this timeout with the transition duration
         }, 500); // Adjust the initial timeout duration as needed
     });
-</script>
+</script> --}}
