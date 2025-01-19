@@ -93,11 +93,11 @@
 {!! renderBodyStartHooks() !!}
 @include('frontend.layout.partials.notice')
 
-<style>
+{{-- <style>
     html {  
         background: black !important;
     }
-</style>
+</style> --}}
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
