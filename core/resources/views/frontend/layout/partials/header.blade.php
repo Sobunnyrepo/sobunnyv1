@@ -87,9 +87,9 @@
  
 </head>
 <body class="new-style">
-    <div style="position: absolute; background:black; z-index:1000000;     width: 100vw;
+    {{-- <div style="position: absolute; background:black; z-index:1000000;     width: 100vw;
     height: 100vh;
-" class="loading-curtain"></div>
+" class="loading-curtain"></div> --}}
 {!! renderBodyStartHooks() !!}
 @include('frontend.layout.partials.notice')
 
