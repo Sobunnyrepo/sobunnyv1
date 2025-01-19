@@ -103,7 +103,11 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Your code here
         setTimeout(function() {
+            document.querySelector('.loading-curtain').style.transition = 'opacity 1s ease';
+            document.querySelector('.loading-curtain').style.opacity = '0';
+            setTimeout(function() {
             document.querySelector('.loading-curtain').style.display = 'none';
-        }, 500); // Adjust the timeout duration as needed
+            }, 1500); // Match this timeout with the transition duration
+        }, 500); // Adjust the initial timeout duration as needed
     });
 </script>
