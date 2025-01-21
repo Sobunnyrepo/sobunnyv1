@@ -70,6 +70,6 @@
 
             setTimeout(() => {
                 document.querySelector(".bodyNone").style.display = "block";
-            }, 200);
+            }, 500);
         });
     </script>
