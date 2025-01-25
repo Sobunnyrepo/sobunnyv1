@@ -40,7 +40,7 @@
     <!-- page css -->
     @yield('style')
 
-    @if(request()->routeIs('homepage'))
+    <!-- @if(request()->routeIs('homepage'))
         <title>{{get_static_option('site_title')}} - {{get_static_option('site_tag_line')}}</title>
         {!! render_site_meta() !!}
     @elseif(request()->routeIs('frontend.dynamic.page') && $page_type === 'page')
@@ -52,7 +52,7 @@
     {!! renderHeadEndHooks() !!}
     @if(!empty(get_static_option('site_third_party_tracking_code')))
         {!! get_static_option('site_third_party_tracking_code') !!}
-    @endif
+    @endif -->
 
 </head>
 @yield('terms')
