@@ -9,7 +9,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Sobunny: Your Platform for Exclusive Escort Experiences</title>
+
+    <meta name="description"
+        content="Exclusive luxury escort services in Miami, New York, Los Angeles, Las Vegas, Chicago, Washington DC, Atlanta, Boston, Austin, San Francisco, Philadelphia, Dallas. Find discreet dates and premium companions for unique experiences in these cities.">
+    <meta name="keywords"
+        content="luxury escorts Miami, discreet dates New York, premium companions Los Angeles, luxury dates Las Vegas, escort agency Chicago, high-end escorts Washington DC, luxury companions USA">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="sobunny USA">
+    <meta name="revisit-after" content="7 days">
+    <meta name="Distribution" content="Global">
+    <meta name="googlebot" content="index, follow">
+    <meta name="twitter:title" content="Luxury Escort Services in Major US Cities">
+    <meta name="twitter:description"
+        content="Explore luxury escort services in Miami, Los Angeles, New York, and other cities for a discreet and premium experience.">
+    <meta name="copyright" content="© 2025 Sobunny, All Rights Reserved.">
+    <meta name="robots" content="noarchive">
+    <meta property="og:title"
+        content="Exclusive Escorts in Miami, New York, Los Angeles, Las Vegas, Chicago, Washington DC, Atlanta, Boston, Austin, San Francisco, Philadelphia, Dallas | Sobunny.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sobunny.com: Verified Escorts in Major US Cities">
+    <meta property="og:description"
+        content="Explore verified independent escorts in cities like Miami, New York, Los Angeles, Las Vegas, and more. Find the perfect companion with Sobunny's premium escort services.">
+    <meta property="og:url" content="https://www.sobunny.com">
+    <meta name="twitter:site" content="@sobunnytw">
+    <meta name="twitter:creator" content="@sobunnytw">
+    <meta name="twitter:title" content="Exclusive Escorts in Major US Cities | Sobunny.com">
+    <meta name="twitter:description"
+        content="Discover verified independent escorts in Miami, New York, Los Angeles, Las Vegas, Chicago, Washington DC, and more. Find discreet and premium companions with Sobunny.">
+    <meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+
+
+
+
+
+
     {!! render_favicon_by_id(get_static_option('site_favicon')) !!}
     @include('frontend.layout.partials.custom-font')
 
@@ -45,11 +84,11 @@
 @yield('terms')
 
 <body class="new-style bodyNone">
-   
+
     {!! renderBodyStartHooks() !!}
     @include('frontend.layout.partials.notice')
 
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
