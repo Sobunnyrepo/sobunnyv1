@@ -48,7 +48,6 @@
 
 
 
-
     {!! render_favicon_by_id(get_static_option('site_favicon')) !!}
     @include('frontend.layout.partials.custom-font')
 
@@ -79,7 +78,6 @@
     <!-- page css -->
     @yield('style')
 
-<<<<<<< HEAD
 
 </head>
 @yield('terms')
@@ -96,38 +94,5 @@
             setTimeout(() => {
                 document.querySelector(".bodyNone").style.display = "block";
             }, 500);
-=======
-    @if(request()->routeIs('homepage'))
-        <title>{{get_static_option('site_title')}} - {{get_static_option('site_tag_line')}}</title>
-        {!! render_site_meta() !!}
-    @elseif(request()->routeIs('frontend.dynamic.page') && $page_type === 'page')
-        {!! render_site_title(optional($page_post)->title) !!}
-        {!! render_site_meta() !!}
-    @else
-        <title>@yield('site_title')</title>
-    @endif
-    {!! renderHeadEndHooks() !!}
-    @if(!empty(get_static_option('site_third_party_tracking_code')))
-        {!! get_static_option('site_third_party_tracking_code') !!}
-    @endif
-
-</head>
-@yield('terms')
-
-<body class="new-style bodyNone">
-    {{-- <div style="position: absolute; background:black; z-index:1000000;     width: 100vw;
-    height: 100vh;
-" class="loading-curtain"></div> --}}
-    {!! renderBodyStartHooks() !!}
-    @include('frontend.layout.partials.notice')
-
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            setTimeout(() => {
-                document.querySelector(".bodyNone").style.display = "block";
-            }, 200);
->>>>>>> 7d9bc22 (new version 1.0 fix)
         });
     </script>
