@@ -1,0 +1,134 @@
+[33m8b12212[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m v1.0.2
+[33m31b05bc[m v1.0.1 console
+[33me714ddc[m sinMeta
+[33ma5b1fb9[m new version 1.0 fix
+[33mda2a54d[m[33m ([m[1;32mCristian[m[33m)[m Merge pull request #10 from Sobunnyrepo/actualizacion-SEO
+[33m44e3fbb[m[33m ([m[1;31morigin/actualizacion-SEO[m[33m)[m test2
+[33m5aefc31[m Merge pull request #9 from AGT921220/actualizacion-SEO
+[33mb307a5f[m test1
+[33ma0a6da5[m Comment out loading curtain div in header template for future use
+[33me09d74d[m Comment out script section in header template for future use
+[33m10ef073[m Remove inline style for background in header template
+[33m0ec5971[m Enhance loading curtain transition effect in header
+[33m5136e69[m Add loading curtain to header with timeout for removal
+[33mdf1dfdf[m Add custom background style to header
+[33m25b3eb6[m Merge pull request #8 from AGT921220/actualizacion-SEO
+[33ma2996a7[m event tg
+[33m3ee54f9[m Merge pull request #7 from AGT921220/actualizacion-SEO
+[33m8a34164[m tg
+[33me7f2b76[m Merge pull request #6 from AGT921220/actualizacion-SEO
+[33m4977168[m Etiqueta Google
+[33m0a483b0[m Merge pull request #5 from AGT921220/actualizacion-SEO
+[33mea47dd7[m Elimino carpeta subnnyv1
+[33m44c2537[m Actualización SEO en el archivo header.blade.php y agregado archivo sobunnyv1
+[33m503e164[m Remove authentication middleware from AdminDashboardController constructor
+[33mbf658ae[m fixes
+[33mb8debd6[m testing
+[33m6dce9e0[m Add email sending functionality to TestCommand with configuration dump
+[33m11f59b8[m listones
+[33m6179523[m Update chat functionality: display listing title in user chat and add chat field to listings
+[33m536a63e[m Hide user listing area and adjust message details layout in chat views
+[33m71c7e52[m Fix typo in message button text across chat and listing detail components
+[33mb136185[m Refactor city_id retrieval logic in CreateDefaultFilters use case to prioritize cookie value
+[33m1103a37[m Update membership views: adjust image source, hide membership ID input, and comment out unused sections
+[33m6ba7f5f[m Add city_id retrieval from cookies in CreateDefaultFilters use case
+[33m9f51574[m Style button elements with new message button class and update button styling
+[33m23f2017[m Add new pull-images-server target and enhance main card image styling
+[33mf909104[m Refactor JavaScript code for wallet history and update user registration layout
+[33m2bd75fb[m Refactor email sender configuration and comment out enquiry form section
+[33m2d3f868[m Enhance user experience with payment processing notification and improve selfie upload handling
+[33m837cb6c[m stable
+[33m418639d[m stable
+[33md7cd086[m stable
+[33mcfa6a4b[m stable
+[33md62d3d1[m stable
+[33m69a5ddb[m stable
+[33ma58643f[m stable
+[33m092b3af[m stable
+[33m01a53dc[m stable
+[33mbba8473[m stable
+[33mb030143[m stable
+[33mc73606e[m fix: update membership plan button visibility and clean up video URL fields in listings
+[33m5e60cdc[m fix: update membership validation rules to make 'feature' optional and remove listing limit constraint
+[33m7f08ec6[m feat: enhance payment controller with additional membership attributes and remove debug logs
+[33mecd1d05[m estabilizacion
+[33m7e315f4[m estabilizacion
+[33m1df77e2[m estabilizacion
+[33m26eb68a[m estabilizacion
+[33mfc6c938[m feat: update user verification badge styles and text
+[33m765d26d[m Merge pull request #3 from AGT921220/respaldo
+[33m4f1bf59[m[33m ([m[1;31morigin/respaldo[m[33m)[m respaldo
+[33m57503e8[m[33m ([m[1;31morigin/modal[m[33m)[m modal
+[33m8ddb3d8[m Merge pull request #2 from AGT921220/modal
+[33m691b6da[m fix: add bootstrap/cache/ to .gitignore
+[33m52683cf[m a
+[33mb8502bb[m a
+[33m90eaa15[m refactor: remove inline styles from modals for improved readability and maintainability
+[33mf8dd9c7[m fix: adjust modal backdrop opacity for consistency
+[33mc76c9b7[m increase modal backdrop opacity for improved visibility
+[33m21f59f8[m increase modal backdrop opacity for better visibility
+[33m9882a6a[m refactor modal styles and structure for terms container
+[33m075300f[m memberships positions
+[33md5069ce[m verified
+[33m4f2a77e[m ataques
+[33m79bfb5e[m prices
+[33m97fecf9[m ataques
+[33m95f74bb[m ataques
+[33m5774bb0[m ataques
+[33m94377ed[m ataques
+[33mdb48839[m ataques
+[33mee6f3b3[m ataques
+[33me38c2ff[m ataques
+[33med0fff5[m ataques
+[33m40eb28c[m ataques
+[33m96283b5[m ataques
+[33m33e0a4a[m ataques
+[33m409f96e[m ataques
+[33m55655b1[m ataques
+[33mb415c55[m ataques
+[33mfb3354b[m ataques
+[33m58be063[m badges
+[33m488efe2[m badges
+[33m8c9efd6[m badges
+[33m01d68a7[m a
+[33m9737360[m Implement terms acceptance modal and related styles; update footer and login views to include terms partial
+[33m7aa5360[m Enhance modal backdrop opacity, add user birthdate column to search results, and comment out currency modal template
+[33maeee84e[m Add main CSS file, update membership plans view, and enhance user profile image layout
+[33m235535b[m Update membership views: comment out 'See All Plans' link, adjust z-index for active membership, and add admin CSS
+[33me93fa64[m Add secondary and tertiary city relationships to Listing model and update location display
+[33mb31acf2[m Refactor identity verification fields and update search city ID reference
+[33m7311be3[m migration
+[33m2f3adaf[m Remove old Sentry integration and add it to core composer configuration
+[33mfc0f995[m Integrate Sentry error reporting and add debug route for testing
+[33m2739b42[m Add Sentry integration and update phone display logic in user listings
+[33m0a59c60[m finish
+[33m322c470[m Refactor payment gateway integration and remove unused dependencies
+[33m917ac0a[m[33m ([m[1;31morigin/version-original-payment[m[33m)[m Add NowPayments integration and membership type handling
+[33m6671a8e[m Add validation for gender selection in search form and integrate SweetAlert for error notifications
+[33m8f594be[m Add custom styling for verified user badge
+[33m8b0cb08[m a
+[33mbba5670[m Merge pull request #1 from AGT921220/filtros
+[33ma7c7dad[m[33m ([m[1;31morigin/filtros[m[33m)[m cambios
+[33m34b66bc[m changes
+[33m2fce316[m correcciones viejas
+[33m56b7ec9[m cambios
+[33m2afbe36[m a
+[33m8675d70[m Refactor payment-related views and controllers to clean up commented code and improve readability
+[33mcb74393[m a
+[33mc1af548[m Implement Bitcoin payment functionality and add user role and birthdate fields
+[33me1458f8[m Add cater fields and update filters in listings
+[33mbd7bed2[m a
+[33me241eef[m a
+[33mf8104e9[m andele mama
+[33m11258cf[m stable
+[33m7d07859[m ignore uploads
+[33mdef8c5d[m as
+[33ma3dd493[m a
+[33meaac49a[m asdsds
+[33m6ae6e91[m as
+[33ma284f9e[m a
+[33m939d169[m a
+[33m1ce0161[m a
+[33md3ade56[m a
+[33m9b37e62[m a
+[33m1e81212[m init
