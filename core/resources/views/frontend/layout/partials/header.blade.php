@@ -8,6 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11560117755"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11560117755');
+</script>
     
 <meta name="description" content="Exclusive luxury escort services in Miami, New York, Los Angeles, Las Vegas, Chicago, Washington DC, Atlanta, Boston, Austin, San Francisco, Philadelphia, Dallas. Find discreet dates and premium companions for unique experiences in these cities.">
 <meta name="keywords" content="luxury escorts Miami, discreet dates New York, premium companions Los Angeles, luxury dates Las Vegas, escort agency Chicago, high-end escorts Washington DC, luxury companions USA">
@@ -32,13 +42,6 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 
-    
-    
-    
-    
-    
-    
-    
     
     {!! render_favicon_by_id(get_static_option('site_favicon')) !!}
      @include('frontend.layout.partials.custom-font')
