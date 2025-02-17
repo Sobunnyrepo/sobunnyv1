@@ -2371,7 +2371,7 @@ object {
   }
 }
 
-.section-padding2 {
+/* .section-padding2 {
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -2392,7 +2392,7 @@ object {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-}
+} */
 
 .top-padding {
   padding-top: 120px;
@@ -2471,8 +2471,8 @@ object {
 }
 
 .footer-padding {
-  padding-top: 100px;
-  padding-bottom: 75px;
+  padding-top: 50px;
+  /* padding-bottom: 75px; */
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .footer-padding {
@@ -2742,9 +2742,9 @@ object {
 
 .infoTitle {
   font-family: var(--heading-font1);
-  color: var(--heading-color);
+  color: var(--bg-light-one);
   margin-bottom: 11px;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   display: block;
 }
@@ -4015,8 +4015,8 @@ object {
   border: 1px solid transparent;
   background: var(--main-color-one);
   color: #ffffff;
-  padding: 13px 15px;
-  font-size: 16px;
+  padding: 0px 15px;
+  font-size: 30px;
   font-weight: 500;
   display: inline-block;
   border-radius: 8px;
@@ -15216,12 +15216,12 @@ object {
   width: 100%;
 }
 .loginArea .login-Wrapper {
-  background: #FFFFFF;
+  background: #000000;
   -webkit-box-shadow: 0px 1px 80px 12px rgba(26, 40, 68, 0.06);
   box-shadow: 0px 1px 80px 12px rgba(26, 40, 68, 0.06);
   border-radius: 12px;
-  padding: 40px 75px;
-  border-radius: 0 8px 0 8px;
+  padding: 30px 30px;
+  /* border-radius: 0 8px 0 8px; */
 }
 @media (max-width: 575px) {
   .loginArea .login-Wrapper {
@@ -15235,17 +15235,17 @@ object {
   padding: 9px 18px 9px 19px;
 }
 .loginArea .login-Wrapper .input-form input {
-  background: none;
-  color: var(--heading-color);
+  /* background: none; */
+  color: var(--bg-dark-one);
   height: 50px;
   width: 100%;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 300;
   padding: 9px 18px 9px 52px;
   position: relative;
   border: 1px solid #EAECF0;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .loginArea .login-Wrapper .input-form input::-webkit-input-placeholder {
   color: var(--heading-color);
@@ -15334,8 +15334,8 @@ object {
   margin-bottom: 20px;
 }
 .loginArea .login-Wrapper .checkWrap2 {
-  font-size: 16px;
-  color: var(--heading-color);
+  font-size: 13px;
+  color: var(--bg-light-one);
   font-family: var(--heading-font);
   display: block;
   position: relative;
@@ -15407,7 +15407,7 @@ object {
 .loginArea .passRemember .forgetPassword .forgetPass {
   color: var(--main-color-one);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
 }
 .loginArea .sinUp .singApp {
   font-family: var(--heading-font1);
@@ -19513,4 +19513,142 @@ object {
     }
   }
 }
+@font-face {
+  font-family: 'BalginBlack';
+  src: url('../fonts/Balgin-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BalginExtralight';
+  src: url('../fonts/Balgin-Extra-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BalginLight';
+  src: url('../fonts/Balgin-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+.login-content{
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+.login-style{
+  flex: 1;
+  margin-top: 6%;
+  order: 2;
+}
+.login-text{
+  order: 1;
+  flex: 2;
+  padding: 0vw 2vw 0vw 3vw;
+}
+.priceLogin{
+  font-family: 'BalginBlack';
+  font-size: 13vw;
+  line-height: 1;
+}
+
+.colorYellow{
+  color: #f1cf68;
+}
+
+.balginL{
+  font-family:'BalginLight';
+}
+.balginEL{
+  font-family:'BalginExtralight';
+}
+.balginB{
+  font-family:'BalginBlack';
+}
+.subtitleLogin{
+  font-size: 3vw;
+}
+.sobunnyLogin{
+  font-size: 7vw;
+  line-height: 1;
+}
+.monthLogin{
+  text-align: center;
+  font-size: 2vw;
+}
+.featuresLogin{
+  padding-left: 4vw;
+  font-size: 1.5vw;
+}
+.offerLogin{
+  font-size:1.6vw;
+}
+.detailsLogin{
+  font-size:1.6vw;
+}
+@media (max-width: 725px) {
+.login-content{
+  display:block;
+}
+.login-text{
+  padding: 6vh 5vw 6vh 8vw;
+}
+.login-style{
+  justify-items: center;
+}
+.sinUp{
+  padding-top: 4vh;
+}
+.subtitleLogin {
+  font-size: 5vw;
+}
+.sobunnyLogin {
+  font-size: 8vw;
+  line-height: 1;
+}
+.priceLogin {
+  font-size: 17vw;
+}
+.featuresLogin {
+  padding-left: 4vw;
+  font-size: 2.5vw;
+}
+.offerLogin {
+  font-size: 2.6vw;
+}
+.detailsLogin {
+  font-size: 2.6vw;
+}
+}
+
+@media (min-width: 1200px) {
+  .login-text{
+    padding: 0vw 2vw 0vw 7vw;
+  }
+  .sinUp{
+    padding-top: 40px;
+  }
+  .subtitleLogin {
+    font-size: 50px;
+  }
+  .sobunnyLogin {
+    font-size: 100px;
+    line-height: 1;
+  }
+  .priceLogin {
+    font-size: 170px;
+  }
+  .featuresLogin {
+    padding-left: 40px;
+    font-size: 18px;
+  }
+  .offerLogin {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .detailsLogin {
+    font-size: 20px;
+  }
+}

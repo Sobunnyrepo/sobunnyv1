@@ -127,7 +127,9 @@ input:checked+.slider:before {
 }
 
 .loginArea .login-Wrapper {
-  margin: auto !important;
+  width: 90%;
+  margin: 0;
+  box-shadow: 0 0 15px 2px rgb(241, 207, 104);
 }
 
 .membership-badge,
