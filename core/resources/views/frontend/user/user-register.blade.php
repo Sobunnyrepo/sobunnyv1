@@ -10,12 +10,15 @@
         span#phone_availability {
             font-size: 13px;
         }
+        body {
+            background-color: #282828 !important;
+        }
     </style>
 @endsection
 @section('content')
     <div class="loginArea section-padding2">
         <div class="container">
-            <div class="row">
+            <div class="row down-body-wraper py-5">
                 {{-- <div class="col-xl-5 col-lg-5 p-0  order-lg-1 order-1 loginLeft-img">
                     <div class="loginLeft-img">
                         <div class="login-cap">
@@ -36,7 +39,7 @@
                     <x-validation.frontend-error/>
                     <form action="{{ route('user.register') }}" method="post">
                         @csrf
-                    <div class="row">
+                    <div class="row down-body-wraper" >
                             <div class="col-lg-6 col-md-12">
                                 <label class="infoTitle">{{ __('First Name') }}</label>
                                 <div class="input-form input-form2">
@@ -69,7 +72,7 @@
                                 <label class="infoTitle">{{ __('Phone Number') }}</label>
                                 <div class="input-form input-form2">
                                     <input type="hidden" id="country-code" name="country_code">
-                                    <input type="tel" name="phone" value="{{old('phone')}}" id="phone" placeholder="{{__('Type Phone')}}">
+                                    <input style="padding-left: 70px !important;" type="tel" name="phone" value="{{old('phone')}}" id="phone" placeholder="{{__('Type Phone')}}">
                                     <span id="phone_availability"></span>
 
                                     <div class="d-none">

@@ -2,10 +2,18 @@
 @section('site_title')
     {{ __('Forget Password') }}
 @endsection
+@section('style')
+    <style>
+        body {
+            background-color: #282828 !important;
+        }
+    </style>
+
+@endsection
 @section('content')
     <div class="loginArea section-padding2">
         <div class="container">
-            <div class="row">
+            <div class="row down-body-wraper py-5">
                 <div class="col-xl-12 col-lg-12 login-Wrapper">
                     <h3 class="tittle mb-3"> {{__('Forgot Password!') }}</h3>
                     <x-validation.frontend-error/>

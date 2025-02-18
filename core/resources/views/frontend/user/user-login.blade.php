@@ -89,7 +89,7 @@
                 <div class="subtitleLogin white-color balginL">Grow Your Success</div>
                 <div class="sobunnyLogin colorYellow balginEL">
                     <img src="{{ asset('../assets/uploads/media-uploader/sobunny-favicon1732591528.png') }}" alt="Icono"
-                        style="width: 8vw;">Sobunny
+                        class="logoSobunny">Sobunny
                 </div>
                 <div class="d-flex">
                     <div>
@@ -103,13 +103,13 @@
                         <span style="display: block; padding-left: 15px; text-indent: -10px;">- Edit without
                             limits</span>
                         <span style="display: block; padding-left: 15px; text-indent: -10px;">- Stand out in multiple cities
-                            at the same time.</span>
+                            at<br> the same time.</span>
                         <span style="display: block; padding-left: 15px; text-indent: -10px;">- Exclusive chat with
                             clients.</span>
                     </div>
                 </div>
 
-                <div class="offerLogin colorYellow balginL"><strong style="font-size:4vw">New here?</strong> Enjoy a special
+                <div class="offerLogin colorYellow balginL"><strong class="newHere">New here?</strong> Enjoy a special
                     offer just for you!
                 </div>
                 <div class="detailsLogin white-color balginL">

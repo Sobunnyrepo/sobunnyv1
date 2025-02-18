@@ -1500,7 +1500,7 @@ p {
 .new-style h4,
 .new-style h5,
 .new-style h6 {
-  color: var(--heading-color1);
+  color: #ffffff;
   font-family: var(--heading-font1);
   font-weight: 600;
 }
@@ -19546,7 +19546,8 @@ object {
 .login-text{
   order: 1;
   flex: 2;
-  padding: 0vw 2vw 0vw 3vw;
+  padding: 0vw 2vw 0vw 7vw;
+
 }
 .priceLogin{
   font-family: 'BalginBlack';
@@ -19588,7 +19589,13 @@ object {
 .detailsLogin{
   font-size:1.6vw;
 }
-@media (max-width: 725px) {
+.newHere{
+  font-size:4vw;
+}
+.logoSobunny{
+  width: 8vw;
+}
+@media (max-width: 900px) {
 .login-content{
   display:block;
 }
@@ -19621,6 +19628,9 @@ object {
 .detailsLogin {
   font-size: 2.6vw;
 }
+.logoSobunny{
+  width: 8vw;
+}
 }
 
 @media (min-width: 1200px) {
@@ -19636,6 +19646,7 @@ object {
   .sobunnyLogin {
     font-size: 100px;
     line-height: 1;
+    padding-bottom: 2vh;
   }
   .priceLogin {
     font-size: 170px;
@@ -19651,4 +19662,12 @@ object {
   .detailsLogin {
     font-size: 20px;
   }
+  .newHere{
+    font-size:40px;
+  }
+  .logoSobunny{
+    width: 110px;
+    float: inline-start;
+  }
+  
 }
