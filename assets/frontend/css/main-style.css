@@ -2744,7 +2744,7 @@ object {
   font-family: var(--heading-font1);
   color: var(--bg-light-one);
   margin-bottom: 11px;
-  font-size: 13px;
+  font-size: 1vw;
   font-weight: 500;
   display: block;
 }
@@ -15334,7 +15334,7 @@ object {
   margin-bottom: 20px;
 }
 .loginArea .login-Wrapper .checkWrap2 {
-  font-size: 13px;
+  font-size: 1vw;
   color: var(--bg-light-one);
   font-family: var(--heading-font);
   display: block;
@@ -15407,7 +15407,7 @@ object {
 .loginArea .passRemember .forgetPassword .forgetPass {
   color: var(--main-color-one);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 1vw;
 }
 .loginArea .sinUp .singApp {
   font-family: var(--heading-font1);
@@ -19531,13 +19531,11 @@ object {
   font-weight: normal;
   font-style: normal;
 }
-
 .login-content{
   display: flex;
   margin-top: 2%;
   margin-bottom: 4%;
 }
-
 .login-style{
   flex: 1;
   margin-top: 6%;
@@ -19546,19 +19544,16 @@ object {
 .login-text{
   order: 1;
   flex: 2;
-  padding: 0vw 2vw 0vw 7vw;
-
+  padding: 0vw 2vw 0vw 5vw;
 }
 .priceLogin{
   font-family: 'BalginBlack';
-  font-size: 13vw;
+  font-size: 11vw;
   line-height: 1;
 }
-
 .colorYellow{
   color: #f1cf68;
 }
-
 .balginL{
   font-family:'BalginLight';
 }
@@ -19569,7 +19564,7 @@ object {
   font-family:'BalginBlack';
 }
 .subtitleLogin{
-  font-size: 3vw;
+  font-size: 2.7vw;
 }
 .sobunnyLogin{
   font-size: 7vw;
@@ -19577,20 +19572,22 @@ object {
 }
 .monthLogin{
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .featuresLogin{
   padding-left: 4vw;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
 }
 .offerLogin{
-  font-size:1.6vw;
+  font-size:1.8vw;
+  line-height: 1;
 }
 .detailsLogin{
-  font-size:1.6vw;
+  font-size:1.7vw;
+  padding: 1vw 0vw;
 }
 .newHere{
-  font-size:4vw;
+  font-size: 4vw;
 }
 .logoSobunny{
   width: 8vw;
@@ -19633,7 +19630,7 @@ object {
 }
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .login-text{
     padding: 0vw 2vw 0vw 7vw;
   }
@@ -19670,4 +19667,4 @@ object {
     float: inline-start;
   }
   
-}
+} */

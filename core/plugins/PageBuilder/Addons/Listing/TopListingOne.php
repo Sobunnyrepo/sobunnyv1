@@ -11,6 +11,7 @@ use plugins\PageBuilder\Fields\Text;
 use plugins\PageBuilder\Traits\LanguageFallbackForPageBuilder;
 use plugins\PageBuilder\PageBuilderBase;
 use Str;
+use Illuminate\Support\Facades\DB;
 
 class TopListingOne extends PageBuilderBase
 {
@@ -109,11 +110,10 @@ class TopListingOne extends PageBuilderBase
             });
         }
 
-        $listings = $listings->orderBy('view', 'desc')
-            ->take($items)
-            ->where('status', 1)
+        $listings = Listing::where('status', 1)
             ->where('is_published', 1)
-            ->inRandomOrder()
+            ->orderBy(DB::raw('RAND()'))
+            ->take($items)
             ->get();
 
         return $this->renderBlade('listing.top-listing-one', [

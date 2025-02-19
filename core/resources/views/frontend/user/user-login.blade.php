@@ -96,7 +96,7 @@
                         <div class="priceLogin colorYellow balginB">$69</div>
                         <div class="monthLogin colorYellow balginL">MONTH</div>
                     </div>
-                    <div class="featuresLogin white-color balginL">
+                    <div class="featuresLogin white-color balginL" style="line-height: 1.2;">
                         <strong class="colorYellow balginL">Your ad, Your Control</strong>
                         <span style="display: block; padding-left: 15px; text-indent: -10px;">- Post up to 8 stunning
                             photos</span>
@@ -109,13 +109,15 @@
                     </div>
                 </div>
 
-                <div class="offerLogin colorYellow balginL"><strong class="newHere">New here?</strong> Enjoy a special
+                <div class="offerLogin colorYellow balginL"><strong class="newHere balginEL">New here?</strong> Enjoy a
+                    special
                     offer just for you!
                 </div>
-                <div class="detailsLogin white-color balginL">
+                <div class="detailsLogin white-color balginL" style="line-height: 1.2;">
                     Pay for 1 month and get 2 months of advertising.<br>
                     More time, more clients, more opportunities. <span class="highlight colorYellow">Don’t miss out!</span>
                 </div>
+
             </div>
         </div>
 
